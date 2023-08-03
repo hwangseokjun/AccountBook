@@ -57,11 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryType.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DataAccess\AccountRepository.cs" />
     <Compile Include="DataAccess\CommonCodeRepository.cs" />
     <Compile Include="DataAccess\IAccountRepository.cs" />
-    <Compile Include="DataAccess\DataModels\FinancialAccount.cs" />
+    <Compile Include="DataAccess\DataModels\AccountEntity.cs" />
     <Compile Include="DataAccess\DataModels\CommonCode.cs" />
     <Compile Include="DataAccess\ICommonCodeRepository.cs" />
     <Compile Include="DataAccess\IRepository.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Models\ExpenseType.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Presenters\AccountPresenter.cs" />
+    <Compile Include="Utils\Extensions.cs" />
     <Compile Include="Views\AccountView.cs">
       <SubType>Form</SubType>
     </Compile>

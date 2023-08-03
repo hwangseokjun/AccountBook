@@ -1,4 +1,5 @@
 ﻿using AccountBook.Models;
+using Dapper.Contrib.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace AccountBook.DataAccess
 {
-    public class FinancialAccount
+    [Table("account")]
+    public class AccountEntity
     {
         public int Id { get; set; }
         public string Date { get; set; }
@@ -19,12 +21,12 @@ namespace AccountBook.DataAccess
         public int IncomeAmount { get; set; }
         public int ExpenseAmount { get; set; }
 
-        public FinancialAccount()
+        public AccountEntity()
         {
 
         }
 
-        public FinancialAccount(Account account)
+        public AccountEntity(Account account)
         {
             Date = account.Date.ToString("yyyy-MM-dd");
             StoreId = account.Store.Id;

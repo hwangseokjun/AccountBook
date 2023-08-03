@@ -1,5 +1,6 @@
 ﻿using AccountBook.DataAccess;
 using AccountBook.Models;
+using AccountBook.Utils;
 using AccountBook.Views;
 using System;
 using System.Collections.Generic;
@@ -30,20 +31,28 @@ namespace AccountBook.Presenters
 
         public void Initialize() 
         {
-            DateTime currentDate = DateTime.Now;
+            var currentDate = DateTime.Now;
             string lastMonth19th = currentDate.AddMonths(-1).AddDays(18).ToString("yyyy-MM-dd");
             string currentMonth20th = currentDate.AddDays(19).ToString("yyyy-MM-dd");
             var accountEntities = _accountRepository.GetBetweenDate(lastMonth19th, currentMonth20th);
             var commonCodes = _commonCodeRepository.GetAll();
             var accounts = new List<Account>();
 
-            foreach (var entity in accountEntities) 
+            var incomeCategories = commonCodes.GetByCategoryType(CategoryType.Income).ToCategories<IncomeCategory>();
+            var expenseCategories = commonCodes.GetByCategoryType(CategoryType.Expense).ToCategories<ExpenseCategory>();
+            var expenseTypes = commonCodes.GetByCategoryType(CategoryType.ExpenseType).ToCategories<ExpenseType>();
+            var stores = commonCodes.GetByCategoryType(CategoryType.Store).ToCategories<Store>();
+
+            foreach (var entity in accountEntities)
             {
                 accounts.Add(new Account
                 {
                     Id = entity.Id,
                     Date = DateTime.Parse(entity.Date),
-
+                    Store = stores.FirstOrDefaultDeepCopy(x => x.Id == entity.StoreId),
+                    ExpenseCategory = expenseCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseCategoryId),
+                    ExpenseType = expenseTypes.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseTypeId),
+                    IncomeCategory = incomeCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.IncomeCategoryId),
                     Description = entity.Description,
                     IncomeAmount = entity.IncomeAmount,
                     ExpenseAmount = entity.ExpenseAmount
@@ -51,11 +60,18 @@ namespace AccountBook.Presenters
             }
 
             _accountView.Accounts = accounts;
+            _accountView.ExpenseCategories = expenseCategories;
+            _accountView.ExpenseTypes = expenseTypes;
+            _accountView.IncomeCategories = incomeCategories;
+            _accountView.Stores = stores;
+            _accountView.StartDate = lastMonth19th;
+            _accountView.EndDate = currentMonth20th;
+            CalculateRemains();
         }
 
         public void AddAccount(Account account) 
         {
-            int id = _accountRepository.Insert(new FinancialAccount(account));
+            int id = _accountRepository.Insert(new AccountEntity(account));
             var accounts = _accountView.Accounts;
             account.Id = id;
             accounts.Add(account);
@@ -66,9 +82,9 @@ namespace AccountBook.Presenters
         public void ModifyAccount(Account account) 
         {
             int id = account.Id;
-            FinancialAccount financialAccount = _accountRepository.GetById(id);
-            financialAccount.Update(account);
-            _accountRepository.Update(financialAccount);
+            AccountEntity accountEntity = _accountRepository.GetById(id);
+            accountEntity.Update(account);
+            _accountRepository.Update(accountEntity);
             CalculateRemains();
         }
 
@@ -118,9 +134,9 @@ namespace AccountBook.Presenters
             int totalExpense = GetTotalExpense();
             int totalRemains = totalIncome - totalExpense;
 
-            _accountView.TotalIncome = $"{totalIncome:NO}원";
-            _accountView.TotalExpense = $"{totalExpense:NO}원";
-            _accountView.TotalRemain = $"{totalRemains:NO}원";
+            _accountView.TotalIncome = $"총수입: {totalIncome:n0}원";
+            _accountView.TotalExpense = $"총지출: {totalExpense:n0}원";
+            _accountView.TotalRemain = $"남은 금액: {totalRemains:n0}원";
         }
 
         private int GetTotalIncome() 

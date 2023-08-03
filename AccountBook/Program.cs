@@ -1,4 +1,6 @@
-﻿using AccountBook.Views;
+﻿using AccountBook.DataAccess;
+using AccountBook.Presenters;
+using AccountBook.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,12 @@ namespace AccountBook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AccountView());
+            var accountView = new AccountView();
+            var accountRepository = new AccountRepository();
+            var commonCodeRepository = new CommonCodeRepository();
+            var accountPresenter = new AccountPresenter(accountView, accountRepository, commonCodeRepository);
+            accountPresenter.Initialize();
+            Application.Run(accountView);
         }
     }
 }

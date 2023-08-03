@@ -26,5 +26,7 @@ namespace AccountBook.Views
         string TotalIncome { set; }
         string TotalExpense { set; }
         string TotalRemain { set; }
+        string StartDate { set; }
+        string EndDate { set; }
     }
 }

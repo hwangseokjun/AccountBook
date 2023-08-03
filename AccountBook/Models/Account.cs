@@ -18,9 +18,9 @@ namespace AccountBook.Models
         public DateTime Date { get; set; }
         [DisplayName("구매처")]
         public Store Store { get; set; }
-        [DisplayName("수입 카테고리")]
+        [DisplayName("수입 항목")]
         public IncomeCategory IncomeCategory { get; set; }
-        [DisplayName("지출 카테고리")]
+        [DisplayName("지출 항목")]
         public ExpenseCategory ExpenseCategory { get; set; }
         [DisplayName("지출 분류")]
         public ExpenseType ExpenseType { get; set; }

@@ -1,4 +1,5 @@
-﻿using Dapper.Contrib.Extensions;
+﻿using Dapper;
+using Dapper.Contrib.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
@@ -10,7 +11,7 @@ namespace AccountBook.DataAccess
 {
     public class AccountRepository : IAccountRepository
     {
-        public int Delete(FinancialAccount entity)
+        public int Delete(AccountEntity entity)
         {
             using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING)) 
             {
@@ -25,27 +26,33 @@ namespace AccountBook.DataAccess
             throw new NotImplementedException();
         }
 
-        public IEnumerable<FinancialAccount> GetAll()
+        public IEnumerable<AccountEntity> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<FinancialAccount> GetBetweenDate(string start, string end)
-        {
-            throw new NotImplementedException();
-        }
-
-        public FinancialAccount GetById(int id)
+        public IEnumerable<AccountEntity> GetBetweenDate(string start, string end)
         {
             using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
             {
-                var account = connection.Get<FinancialAccount>(id);
+                string query = "SELECT * FROM account WHERE Date BETWEEN @StartDate AND @EndDate;";
+                var accountEntities = connection.Query<AccountEntity>(query, new { StartDate = start, EndDate = end });
+
+                return accountEntities;
+            }
+        }
+
+        public AccountEntity GetById(int id)
+        {
+            using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
+            {
+                var account = connection.Get<AccountEntity>(id);
 
                 return account;
             }
         }
 
-        public int Insert(FinancialAccount entity)
+        public int Insert(AccountEntity entity)
         {
             using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
             {
@@ -55,11 +62,11 @@ namespace AccountBook.DataAccess
             }
         }
 
-        public void Update(FinancialAccount entity)
+        public void Update(AccountEntity entity)
         {
             using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
             {
-                connection.Update<FinancialAccount>(entity);
+                connection.Update<AccountEntity>(entity);
             }
         }
     }

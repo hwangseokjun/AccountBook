@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Dapper.Contrib.Extensions;
+using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +22,12 @@ namespace AccountBook.DataAccess
 
         public IEnumerable<CommonCode> GetAll()
         {
-            throw new NotImplementedException();
+            using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
+            {
+                var commonCodes = connection.GetAll<CommonCode>();
+
+                return commonCodes;
+            }
         }
 
         public CommonCode GetById(int id)

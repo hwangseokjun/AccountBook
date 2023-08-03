@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace AccountBook.DataAccess
 {
-    public interface IAccountRepository : IRepository<FinancialAccount, int>
+    public interface IAccountRepository : IRepository<AccountEntity, int>
     {
-        IEnumerable<FinancialAccount> GetBetweenDate(string start, string end);
+        IEnumerable<AccountEntity> GetBetweenDate(string start, string end);
     }
 }

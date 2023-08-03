@@ -39,22 +39,42 @@ namespace AccountBook.Views
         public List<ExpenseCategory> ExpenseCategories 
         { 
             get => _expenseCategories;
-            set => throw new NotImplementedException();
+            set 
+            {
+                _expenseCategories = value;
+                dgv_expenseCategory.DataSource = null;
+                dgv_expenseCategory.DataSource = _expenseCategories;
+            }
         }
         public List<IncomeCategory> IncomeCategories 
         { 
-            get => _incomeCategories; 
-            set => throw new NotImplementedException(); 
+            get => _incomeCategories;
+            set
+            {
+                _incomeCategories = value;
+                dgv_incomeCategory.DataSource = null;
+                dgv_incomeCategory.DataSource = _incomeCategories;
+            }
         }
         public List<ExpenseType> ExpenseTypes 
         { 
-            get => _expenseTypes; 
-            set => throw new NotImplementedException(); 
+            get => _expenseTypes;
+            set
+            {
+                _expenseTypes = value;
+                dgv_expenseType.DataSource = null;
+                dgv_expenseType.DataSource = _expenseTypes;
+            }
         }
         public List<Store> Stores 
         { 
             get => _stores;
-            set => throw new NotImplementedException(); 
+            set
+            {
+                _stores = value;
+                dgv_store.DataSource = null;
+                dgv_store.DataSource = _stores;
+            }
         }
         public string TotalIncome 
         { 
@@ -67,6 +87,14 @@ namespace AccountBook.Views
         public string TotalRemain 
         {
             set => lbl_totalRemain.Text = value; 
+        }
+        public string StartDate 
+        {
+            set => lbl_startDate.Text = $"시작일: {value}"; 
+        }
+        public string EndDate 
+        {
+            set => lbl_endDate.Text = $"종료일: {value}";
         }
 
         public AccountView()
