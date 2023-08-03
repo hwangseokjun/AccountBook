@@ -86,6 +86,10 @@ namespace AccountBook.Views
             this.dgv_incomeCategory = new System.Windows.Forms.DataGridView();
             this.dgv_expenseType = new System.Windows.Forms.DataGridView();
             this.btn_saveCategory = new System.Windows.Forms.Button();
+            this.dtp_saveExpense = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtp_saveIncome = new System.Windows.Forms.DateTimePicker();
             this.gbx_search.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.gbx_account.SuspendLayout();
@@ -228,7 +232,7 @@ namespace AccountBook.Views
             this.gbx_account.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbx_account.Name = "gbx_account";
             this.gbx_account.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbx_account.Size = new System.Drawing.Size(401, 336);
+            this.gbx_account.Size = new System.Drawing.Size(401, 384);
             this.gbx_account.TabIndex = 2;
             this.gbx_account.TabStop = false;
             this.gbx_account.Text = "입력하기";
@@ -241,11 +245,13 @@ namespace AccountBook.Views
             this.tabControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(384, 298);
+            this.tabControl2.Size = new System.Drawing.Size(384, 346);
             this.tabControl2.TabIndex = 0;
             // 
             // tab_expense
             // 
+            this.tab_expense.Controls.Add(this.label9);
+            this.tab_expense.Controls.Add(this.dtp_saveExpense);
             this.tab_expense.Controls.Add(this.label6);
             this.tab_expense.Controls.Add(this.label5);
             this.tab_expense.Controls.Add(this.label3);
@@ -261,7 +267,7 @@ namespace AccountBook.Views
             this.tab_expense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_expense.Name = "tab_expense";
             this.tab_expense.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_expense.Size = new System.Drawing.Size(376, 266);
+            this.tab_expense.Size = new System.Drawing.Size(376, 314);
             this.tab_expense.TabIndex = 0;
             this.tab_expense.Text = "지출";
             this.tab_expense.UseVisualStyleBackColor = true;
@@ -318,7 +324,7 @@ namespace AccountBook.Views
             // 
             // btn_saveExpenseAccount
             // 
-            this.btn_saveExpenseAccount.Location = new System.Drawing.Point(139, 213);
+            this.btn_saveExpenseAccount.Location = new System.Drawing.Point(137, 272);
             this.btn_saveExpenseAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_saveExpenseAccount.Name = "btn_saveExpenseAccount";
             this.btn_saveExpenseAccount.Size = new System.Drawing.Size(107, 34);
@@ -372,6 +378,8 @@ namespace AccountBook.Views
             // 
             // tab_income
             // 
+            this.tab_income.Controls.Add(this.dtp_saveIncome);
+            this.tab_income.Controls.Add(this.label10);
             this.tab_income.Controls.Add(this.btn_saveIncomeAccount);
             this.tab_income.Controls.Add(this.label8);
             this.tab_income.Controls.Add(this.label7);
@@ -383,14 +391,14 @@ namespace AccountBook.Views
             this.tab_income.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_income.Name = "tab_income";
             this.tab_income.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_income.Size = new System.Drawing.Size(376, 266);
+            this.tab_income.Size = new System.Drawing.Size(376, 314);
             this.tab_income.TabIndex = 1;
             this.tab_income.Text = "수입";
             this.tab_income.UseVisualStyleBackColor = true;
             // 
             // btn_saveIncomeAccount
             // 
-            this.btn_saveIncomeAccount.Location = new System.Drawing.Point(139, 213);
+            this.btn_saveIncomeAccount.Location = new System.Drawing.Point(137, 272);
             this.btn_saveIncomeAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_saveIncomeAccount.Name = "btn_saveIncomeAccount";
             this.btn_saveIncomeAccount.Size = new System.Drawing.Size(107, 34);
@@ -461,18 +469,18 @@ namespace AccountBook.Views
             this.gbx_category.Controls.Add(this.txt_saveCategory);
             this.gbx_category.Controls.Add(this.cbx_saveCategory);
             this.gbx_category.Controls.Add(this.tabControl);
-            this.gbx_category.Location = new System.Drawing.Point(971, 412);
+            this.gbx_category.Location = new System.Drawing.Point(971, 474);
             this.gbx_category.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbx_category.Name = "gbx_category";
             this.gbx_category.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbx_category.Size = new System.Drawing.Size(401, 404);
+            this.gbx_category.Size = new System.Drawing.Size(401, 335);
             this.gbx_category.TabIndex = 3;
             this.gbx_category.TabStop = false;
             this.gbx_category.Text = "분류 생성하기";
             // 
             // txt_saveCategory
             // 
-            this.txt_saveCategory.Location = new System.Drawing.Point(151, 363);
+            this.txt_saveCategory.Location = new System.Drawing.Point(150, 291);
             this.txt_saveCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_saveCategory.Name = "txt_saveCategory";
             this.txt_saveCategory.Size = new System.Drawing.Size(127, 28);
@@ -486,7 +494,7 @@ namespace AccountBook.Views
             "수입항목",
             "지출종류",
             "구매처"});
-            this.cbx_saveCategory.Location = new System.Drawing.Point(9, 364);
+            this.cbx_saveCategory.Location = new System.Drawing.Point(9, 291);
             this.cbx_saveCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbx_saveCategory.Name = "cbx_saveCategory";
             this.cbx_saveCategory.Size = new System.Drawing.Size(133, 26);
@@ -498,7 +506,7 @@ namespace AccountBook.Views
             this.tabControl.Controls.Add(this.tab_incomeCategory);
             this.tabControl.Controls.Add(this.tab_expenseType);
             this.tabControl.Controls.Add(this.tab_store);
-            this.tabControl.Location = new System.Drawing.Point(9, 30);
+            this.tabControl.Location = new System.Drawing.Point(9, 29);
             this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -704,13 +712,45 @@ namespace AccountBook.Views
             // 
             // btn_saveCategory
             // 
-            this.btn_saveCategory.Location = new System.Drawing.Point(285, 359);
+            this.btn_saveCategory.Location = new System.Drawing.Point(286, 290);
             this.btn_saveCategory.Name = "btn_saveCategory";
             this.btn_saveCategory.Size = new System.Drawing.Size(107, 34);
             this.btn_saveCategory.TabIndex = 3;
             this.btn_saveCategory.Text = "항목추가";
             this.btn_saveCategory.UseVisualStyleBackColor = true;
             this.btn_saveCategory.Click += new System.EventHandler(this.btn_saveCategory_Click);
+            // 
+            // dtp_saveExpense
+            // 
+            this.dtp_saveExpense.Location = new System.Drawing.Point(151, 214);
+            this.dtp_saveExpense.Name = "dtp_saveExpense";
+            this.dtp_saveExpense.Size = new System.Drawing.Size(205, 28);
+            this.dtp_saveExpense.TabIndex = 12;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 221);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 18);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "일자";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 139);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 18);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "일자";
+            // 
+            // dtp_saveIncome
+            // 
+            this.dtp_saveIncome.Location = new System.Drawing.Point(151, 134);
+            this.dtp_saveIncome.Name = "dtp_saveIncome";
+            this.dtp_saveIncome.Size = new System.Drawing.Size(205, 28);
+            this.dtp_saveIncome.TabIndex = 10;
             // 
             // AccountView
             // 
@@ -821,6 +861,10 @@ namespace AccountBook.Views
         private System.Windows.Forms.DataGridView dgv_incomeCategory;
         private System.Windows.Forms.DataGridView dgv_expenseType;
         private System.Windows.Forms.Button btn_saveCategory;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dtp_saveExpense;
+        private System.Windows.Forms.DateTimePicker dtp_saveIncome;
+        private System.Windows.Forms.Label label10;
     }
 }
 

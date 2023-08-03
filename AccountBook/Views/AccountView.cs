@@ -1,4 +1,5 @@
 ﻿using AccountBook.Models;
+using AccountBook.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -117,6 +118,13 @@ namespace AccountBook.Views
 
         private void btn_saveExpenseAccount_Click(object sender, EventArgs e)
         {
+            var account = new Account 
+            { 
+                Date = dtp_saveExpense.Value,
+                Store = (Store)((Store)cbx_store.SelectedItem).Clone(),
+                ExpenseCategory = (ExpenseCategory)((ExpenseCategory)cbx_expenseCategory.SelectedItem).Clone(),
+
+            };
             SaveAccount?.Invoke(null);
         }
 

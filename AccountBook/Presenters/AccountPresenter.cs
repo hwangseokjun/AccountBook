@@ -29,7 +29,7 @@ namespace AccountBook.Presenters
             _accountView.RemoveCategory += DeleteCategory;
         }
 
-        public void Initialize() 
+        public void Initialize()
         {
             var currentDate = DateTime.Now;
             string lastMonth19th = currentDate.AddMonths(-1).AddDays(18).ToString("yyyy-MM-dd");
