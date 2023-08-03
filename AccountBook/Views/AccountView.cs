@@ -33,7 +33,7 @@ namespace AccountBook.Views
             {
                 _accounts = value;
                 dgv_account.DataSource = null;
-                dgv_account.DataSource = _accounts;
+                dgv_account.DataSource = _accounts.FindAll(x => x.Visible);
             } 
         }
         public List<ExpenseCategory> ExpenseCategories 
@@ -43,7 +43,10 @@ namespace AccountBook.Views
             {
                 _expenseCategories = value;
                 dgv_expenseCategory.DataSource = null;
-                dgv_expenseCategory.DataSource = _expenseCategories;
+                var showing = _expenseCategories.FindAll(x => x.IsDeleted == false);
+                dgv_expenseCategory.DataSource = showing;
+                cbx_expenseCategory.DataSource = showing;
+                cbx_expenseCategory.DisplayMember = "Name";
             }
         }
         public List<IncomeCategory> IncomeCategories 
@@ -53,7 +56,10 @@ namespace AccountBook.Views
             {
                 _incomeCategories = value;
                 dgv_incomeCategory.DataSource = null;
-                dgv_incomeCategory.DataSource = _incomeCategories;
+                var showing = _incomeCategories.FindAll(x => x.IsDeleted == false);
+                dgv_incomeCategory.DataSource = showing;
+                cbx_incomeCategory.DataSource = showing;
+                cbx_incomeCategory.DisplayMember = "Name";
             }
         }
         public List<ExpenseType> ExpenseTypes 
@@ -63,7 +69,10 @@ namespace AccountBook.Views
             {
                 _expenseTypes = value;
                 dgv_expenseType.DataSource = null;
-                dgv_expenseType.DataSource = _expenseTypes;
+                var showing = _expenseTypes.FindAll(x => x.IsDeleted == false);
+                dgv_expenseType.DataSource = showing;
+                cbx_expenseType.DataSource = showing;
+                cbx_expenseType.DisplayMember = "Name";
             }
         }
         public List<Store> Stores 
@@ -73,7 +82,10 @@ namespace AccountBook.Views
             {
                 _stores = value;
                 dgv_store.DataSource = null;
-                dgv_store.DataSource = _stores;
+                var showing = _stores.FindAll(x => x.IsDeleted == false);
+                dgv_store.DataSource = showing;
+                cbx_store.DataSource = showing;
+                cbx_store.DisplayMember = "Name";
             }
         }
         public string TotalIncome 
@@ -100,6 +112,7 @@ namespace AccountBook.Views
         public AccountView()
         {
             InitializeComponent();
+            cbx_saveCategory.SelectedIndex = 0;
         }
 
         private void btn_saveExpenseAccount_Click(object sender, EventArgs e)
@@ -128,18 +141,69 @@ namespace AccountBook.Views
 
         }
 
-        private void cbx_income_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbx_expense_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgv_account_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void chk_expense_CheckedChanged(object sender, EventArgs e)
+        {
+            bool showExpense = chk_expense.Checked;
+            Accounts.ForEach(x => 
+            {
+                if (0 < x.ExpenseAmount) 
+                {
+                    x.Visible = showExpense;
+                }
+            });
+            Accounts = Accounts;
+        }
+
+        private void chk_income_CheckedChanged(object sender, EventArgs e)
+        {
+            bool showIncome = chk_income.Checked;
+            Accounts.ForEach(x =>
+            {
+                if (0 < x.IncomeAmount)
+                {
+                    x.Visible = showIncome;
+                }
+            });
+            Accounts = Accounts;
+        }
+
+        private void btn_saveCategory_Click(object sender, EventArgs e)
+        {
+            string text = cbx_saveCategory.SelectedItem.ToString();
+            string name = txt_saveCategory.Text;
+
+            if (string.IsNullOrWhiteSpace(name)) 
+            {
+                MessageBox.Show("카테고리명 입력 필요");
+
+                return;
+            }
+
+            switch (text) 
+            {
+                case "지출항목":
+                    SaveCategory.Invoke(new ExpenseCategory { Name = name });
+                    break;
+
+                case "수입항목":
+                    SaveCategory.Invoke(new IncomeCategory { Name = name });
+                    break;
+
+                case "지출종류":
+                    SaveCategory.Invoke(new ExpenseType { Name = name });
+                    break;
+
+                case "구매처":
+                    SaveCategory.Invoke(new Store { Name = name });
+                    break;
+
+                default:
+                    throw new NotSupportedException("");
+            }
         }
     }
 }

@@ -100,21 +100,59 @@ namespace AccountBook.Presenters
 
         public void AddCategory<T>(T category) where T : BaseCategory 
         {
+            int id;
+
             if (category is ExpenseCategory expenseCategory)
             {
-
+                var commonCode = new CommonCode 
+                { 
+                    Type = 1,
+                    Name = expenseCategory.Name
+                };
+                id = _commonCodeRepository.Insert(commonCode);
+                var expenseCategories = _accountView.ExpenseCategories;
+                expenseCategory.Id = id;
+                expenseCategories.Add(expenseCategory);
+                _accountView.ExpenseCategories = expenseCategories;
             }
             else if (category is ExpenseType expenseType)
             {
-
+                var commonCode = new CommonCode
+                {
+                    Type = 2,
+                    Name = expenseType.Name
+                };
+                id = _commonCodeRepository.Insert(commonCode);
+                var expenseTypes = _accountView.ExpenseTypes;
+                expenseType.Id = id;
+                expenseTypes.Add(expenseType);
+                _accountView.ExpenseTypes = expenseTypes;
             }
             else if (category is IncomeCategory incomeCategory) 
-            { 
-            
+            {
+                var commonCode = new CommonCode
+                {
+                    Type = 0,
+                    Name = incomeCategory.Name
+                };
+                id = _commonCodeRepository.Insert(commonCode);
+                var incomeCategories = _accountView.IncomeCategories;
+                incomeCategory.Id = id;
+                incomeCategories.Add(incomeCategory);
+                _accountView.IncomeCategories = incomeCategories;
             }
             else if (category is Store store) 
-            { 
-            
+            {
+                var commonCode = new CommonCode
+                {
+                    Type = 3,
+                    Name = store.Name
+                };
+                id = _commonCodeRepository.Insert(commonCode);
+                var stores = _accountView.Stores;
+                store.Id = id;
+                stores.Add(store);
+                _accountView.Stores = stores;
             }
         }
 
@@ -136,7 +174,7 @@ namespace AccountBook.Presenters
 
             _accountView.TotalIncome = $"총수입: {totalIncome:n0}원";
             _accountView.TotalExpense = $"총지출: {totalExpense:n0}원";
-            _accountView.TotalRemain = $"남은 금액: {totalRemains:n0}원";
+            _accountView.TotalRemain = $"합계: {totalRemains:n0}원";
         }
 
         private int GetTotalIncome() 

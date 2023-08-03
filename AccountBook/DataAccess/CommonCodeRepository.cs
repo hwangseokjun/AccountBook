@@ -37,7 +37,12 @@ namespace AccountBook.DataAccess
 
         public int Insert(CommonCode entity)
         {
-            throw new NotImplementedException();
+            using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
+            {
+                long id = connection.Insert(entity);
+
+                return (int)id;
+            }
         }
 
         public void Update(CommonCode entity)

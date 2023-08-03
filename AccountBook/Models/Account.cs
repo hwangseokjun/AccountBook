@@ -14,6 +14,8 @@ namespace AccountBook.Models
         public int Id { get; set; }
         [DisplayName("선택")]
         public bool IsSelected { get; set; } = false;
+        [Browsable(false)]
+        public bool Visible { get; set; } = true;
         [DisplayName("날짜")]
         public DateTime Date { get; set; }
         [DisplayName("구매처")]

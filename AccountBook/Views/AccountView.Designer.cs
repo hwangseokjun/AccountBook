@@ -50,22 +50,22 @@ namespace AccountBook.Views
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_saveExpenseAccount = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbx_expenseType = new System.Windows.Forms.ComboBox();
+            this.txt_expenseAmount = new System.Windows.Forms.TextBox();
+            this.cbx_expenseCategory = new System.Windows.Forms.ComboBox();
+            this.cbx_store = new System.Windows.Forms.ComboBox();
+            this.txt_expenseDescription = new System.Windows.Forms.TextBox();
             this.tab_income = new System.Windows.Forms.TabPage();
             this.btn_saveIncomeAccount = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cbx_incomeCategory = new System.Windows.Forms.ComboBox();
+            this.txt_incomeAmount = new System.Windows.Forms.TextBox();
+            this.txt_incomeDescription = new System.Windows.Forms.TextBox();
             this.gbx_category = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.txt_saveCategory = new System.Windows.Forms.TextBox();
+            this.cbx_saveCategory = new System.Windows.Forms.ComboBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tab_expenseCategory = new System.Windows.Forms.TabPage();
             this.tab_expenseType = new System.Windows.Forms.TabPage();
@@ -74,8 +74,8 @@ namespace AccountBook.Views
             this.lbl_totalIncome = new System.Windows.Forms.Label();
             this.lbl_totalExpense = new System.Windows.Forms.Label();
             this.lbl_totalRemain = new System.Windows.Forms.Label();
-            this.cbx_income = new System.Windows.Forms.CheckBox();
-            this.cbx_expense = new System.Windows.Forms.CheckBox();
+            this.chk_income = new System.Windows.Forms.CheckBox();
+            this.chk_expense = new System.Windows.Forms.CheckBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbl_startDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_endDate = new System.Windows.Forms.ToolStripStatusLabel();
@@ -85,6 +85,7 @@ namespace AccountBook.Views
             this.dgv_expenseCategory = new System.Windows.Forms.DataGridView();
             this.dgv_incomeCategory = new System.Windows.Forms.DataGridView();
             this.dgv_expenseType = new System.Windows.Forms.DataGridView();
+            this.btn_saveCategory = new System.Windows.Forms.Button();
             this.gbx_search.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.gbx_account.SuspendLayout();
@@ -198,26 +199,26 @@ namespace AccountBook.Views
             this.통계ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1457, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1457, 35);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // 금전출납부ToolStripMenuItem
             // 
             this.금전출납부ToolStripMenuItem.Name = "금전출납부ToolStripMenuItem";
-            this.금전출납부ToolStripMenuItem.Size = new System.Drawing.Size(118, 30);
+            this.금전출납부ToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
             this.금전출납부ToolStripMenuItem.Text = "금전출납부";
             // 
             // 예산현황ToolStripMenuItem
             // 
             this.예산현황ToolStripMenuItem.Name = "예산현황ToolStripMenuItem";
-            this.예산현황ToolStripMenuItem.Size = new System.Drawing.Size(100, 30);
+            this.예산현황ToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
             this.예산현황ToolStripMenuItem.Text = "예산현황";
             // 
             // 통계ToolStripMenuItem
             // 
             this.통계ToolStripMenuItem.Name = "통계ToolStripMenuItem";
-            this.통계ToolStripMenuItem.Size = new System.Drawing.Size(64, 30);
+            this.통계ToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
             this.통계ToolStripMenuItem.Text = "통계";
             // 
             // gbx_account
@@ -251,11 +252,11 @@ namespace AccountBook.Views
             this.tab_expense.Controls.Add(this.label2);
             this.tab_expense.Controls.Add(this.label1);
             this.tab_expense.Controls.Add(this.btn_saveExpenseAccount);
-            this.tab_expense.Controls.Add(this.comboBox3);
-            this.tab_expense.Controls.Add(this.textBox3);
-            this.tab_expense.Controls.Add(this.comboBox2);
-            this.tab_expense.Controls.Add(this.comboBox1);
-            this.tab_expense.Controls.Add(this.textBox2);
+            this.tab_expense.Controls.Add(this.cbx_expenseType);
+            this.tab_expense.Controls.Add(this.txt_expenseAmount);
+            this.tab_expense.Controls.Add(this.cbx_expenseCategory);
+            this.tab_expense.Controls.Add(this.cbx_store);
+            this.tab_expense.Controls.Add(this.txt_expenseDescription);
             this.tab_expense.Location = new System.Drawing.Point(4, 28);
             this.tab_expense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_expense.Name = "tab_expense";
@@ -326,48 +327,48 @@ namespace AccountBook.Views
             this.btn_saveExpenseAccount.UseVisualStyleBackColor = true;
             this.btn_saveExpenseAccount.Click += new System.EventHandler(this.btn_saveExpenseAccount_Click);
             // 
-            // comboBox3
+            // cbx_expenseType
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(151, 174);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(205, 26);
-            this.comboBox3.TabIndex = 5;
+            this.cbx_expenseType.FormattingEnabled = true;
+            this.cbx_expenseType.Location = new System.Drawing.Point(151, 174);
+            this.cbx_expenseType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbx_expenseType.Name = "cbx_expenseType";
+            this.cbx_expenseType.Size = new System.Drawing.Size(205, 26);
+            this.cbx_expenseType.TabIndex = 5;
             // 
-            // textBox3
+            // txt_expenseAmount
             // 
-            this.textBox3.Location = new System.Drawing.Point(151, 90);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 28);
-            this.textBox3.TabIndex = 4;
+            this.txt_expenseAmount.Location = new System.Drawing.Point(151, 90);
+            this.txt_expenseAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_expenseAmount.Name = "txt_expenseAmount";
+            this.txt_expenseAmount.Size = new System.Drawing.Size(205, 28);
+            this.txt_expenseAmount.TabIndex = 4;
             // 
-            // comboBox2
+            // cbx_expenseCategory
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(151, 10);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(205, 26);
-            this.comboBox2.TabIndex = 3;
+            this.cbx_expenseCategory.FormattingEnabled = true;
+            this.cbx_expenseCategory.Location = new System.Drawing.Point(151, 10);
+            this.cbx_expenseCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbx_expenseCategory.Name = "cbx_expenseCategory";
+            this.cbx_expenseCategory.Size = new System.Drawing.Size(205, 26);
+            this.cbx_expenseCategory.TabIndex = 3;
             // 
-            // comboBox1
+            // cbx_store
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(151, 134);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(205, 26);
-            this.comboBox1.TabIndex = 2;
+            this.cbx_store.FormattingEnabled = true;
+            this.cbx_store.Location = new System.Drawing.Point(151, 134);
+            this.cbx_store.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbx_store.Name = "cbx_store";
+            this.cbx_store.Size = new System.Drawing.Size(205, 26);
+            this.cbx_store.TabIndex = 2;
             // 
-            // textBox2
+            // txt_expenseDescription
             // 
-            this.textBox2.Location = new System.Drawing.Point(151, 50);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 28);
-            this.textBox2.TabIndex = 1;
+            this.txt_expenseDescription.Location = new System.Drawing.Point(151, 50);
+            this.txt_expenseDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_expenseDescription.Name = "txt_expenseDescription";
+            this.txt_expenseDescription.Size = new System.Drawing.Size(205, 28);
+            this.txt_expenseDescription.TabIndex = 1;
             // 
             // tab_income
             // 
@@ -375,9 +376,9 @@ namespace AccountBook.Views
             this.tab_income.Controls.Add(this.label8);
             this.tab_income.Controls.Add(this.label7);
             this.tab_income.Controls.Add(this.label4);
-            this.tab_income.Controls.Add(this.comboBox4);
-            this.tab_income.Controls.Add(this.textBox5);
-            this.tab_income.Controls.Add(this.textBox4);
+            this.tab_income.Controls.Add(this.cbx_incomeCategory);
+            this.tab_income.Controls.Add(this.txt_incomeAmount);
+            this.tab_income.Controls.Add(this.txt_incomeDescription);
             this.tab_income.Location = new System.Drawing.Point(4, 28);
             this.tab_income.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_income.Name = "tab_income";
@@ -428,36 +429,37 @@ namespace AccountBook.Views
             this.label4.TabIndex = 5;
             this.label4.Text = "카테고리";
             // 
-            // comboBox4
+            // cbx_incomeCategory
             // 
-            this.comboBox4.DropDownWidth = 145;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(151, 10);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(205, 26);
-            this.comboBox4.TabIndex = 3;
+            this.cbx_incomeCategory.DropDownWidth = 145;
+            this.cbx_incomeCategory.FormattingEnabled = true;
+            this.cbx_incomeCategory.Location = new System.Drawing.Point(151, 10);
+            this.cbx_incomeCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbx_incomeCategory.Name = "cbx_incomeCategory";
+            this.cbx_incomeCategory.Size = new System.Drawing.Size(205, 26);
+            this.cbx_incomeCategory.TabIndex = 3;
             // 
-            // textBox5
+            // txt_incomeAmount
             // 
-            this.textBox5.Location = new System.Drawing.Point(151, 90);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(205, 28);
-            this.textBox5.TabIndex = 2;
+            this.txt_incomeAmount.Location = new System.Drawing.Point(151, 90);
+            this.txt_incomeAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_incomeAmount.Name = "txt_incomeAmount";
+            this.txt_incomeAmount.Size = new System.Drawing.Size(205, 28);
+            this.txt_incomeAmount.TabIndex = 2;
             // 
-            // textBox4
+            // txt_incomeDescription
             // 
-            this.textBox4.Location = new System.Drawing.Point(151, 50);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(205, 28);
-            this.textBox4.TabIndex = 1;
+            this.txt_incomeDescription.Location = new System.Drawing.Point(151, 50);
+            this.txt_incomeDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_incomeDescription.Name = "txt_incomeDescription";
+            this.txt_incomeDescription.Size = new System.Drawing.Size(205, 28);
+            this.txt_incomeDescription.TabIndex = 1;
             // 
             // gbx_category
             // 
-            this.gbx_category.Controls.Add(this.textBox6);
-            this.gbx_category.Controls.Add(this.comboBox6);
+            this.gbx_category.Controls.Add(this.btn_saveCategory);
+            this.gbx_category.Controls.Add(this.txt_saveCategory);
+            this.gbx_category.Controls.Add(this.cbx_saveCategory);
             this.gbx_category.Controls.Add(this.tabControl);
             this.gbx_category.Location = new System.Drawing.Point(971, 412);
             this.gbx_category.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -468,22 +470,27 @@ namespace AccountBook.Views
             this.gbx_category.TabStop = false;
             this.gbx_category.Text = "분류 생성하기";
             // 
-            // textBox6
+            // txt_saveCategory
             // 
-            this.textBox6.Location = new System.Drawing.Point(151, 363);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(183, 28);
-            this.textBox6.TabIndex = 2;
+            this.txt_saveCategory.Location = new System.Drawing.Point(151, 363);
+            this.txt_saveCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_saveCategory.Name = "txt_saveCategory";
+            this.txt_saveCategory.Size = new System.Drawing.Size(127, 28);
+            this.txt_saveCategory.TabIndex = 2;
             // 
-            // comboBox6
+            // cbx_saveCategory
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(9, 364);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(133, 26);
-            this.comboBox6.TabIndex = 1;
+            this.cbx_saveCategory.FormattingEnabled = true;
+            this.cbx_saveCategory.Items.AddRange(new object[] {
+            "지출항목",
+            "수입항목",
+            "지출종류",
+            "구매처"});
+            this.cbx_saveCategory.Location = new System.Drawing.Point(9, 364);
+            this.cbx_saveCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbx_saveCategory.Name = "cbx_saveCategory";
+            this.cbx_saveCategory.Size = new System.Drawing.Size(133, 26);
+            this.cbx_saveCategory.TabIndex = 1;
             // 
             // tabControl
             // 
@@ -575,33 +582,33 @@ namespace AccountBook.Views
             this.lbl_totalRemain.TabIndex = 9;
             this.lbl_totalRemain.Text = "label4";
             // 
-            // cbx_income
+            // chk_income
             // 
-            this.cbx_income.AutoSize = true;
-            this.cbx_income.Checked = true;
-            this.cbx_income.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbx_income.Location = new System.Drawing.Point(17, 195);
-            this.cbx_income.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbx_income.Name = "cbx_income";
-            this.cbx_income.Size = new System.Drawing.Size(70, 22);
-            this.cbx_income.TabIndex = 10;
-            this.cbx_income.Text = "수입";
-            this.cbx_income.UseVisualStyleBackColor = true;
-            this.cbx_income.CheckedChanged += new System.EventHandler(this.cbx_income_CheckedChanged);
+            this.chk_income.AutoSize = true;
+            this.chk_income.Checked = true;
+            this.chk_income.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_income.Location = new System.Drawing.Point(17, 195);
+            this.chk_income.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_income.Name = "chk_income";
+            this.chk_income.Size = new System.Drawing.Size(70, 22);
+            this.chk_income.TabIndex = 10;
+            this.chk_income.Text = "수입";
+            this.chk_income.UseVisualStyleBackColor = true;
+            this.chk_income.CheckedChanged += new System.EventHandler(this.chk_income_CheckedChanged);
             // 
-            // cbx_expense
+            // chk_expense
             // 
-            this.cbx_expense.AutoSize = true;
-            this.cbx_expense.Checked = true;
-            this.cbx_expense.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbx_expense.Location = new System.Drawing.Point(94, 195);
-            this.cbx_expense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbx_expense.Name = "cbx_expense";
-            this.cbx_expense.Size = new System.Drawing.Size(70, 22);
-            this.cbx_expense.TabIndex = 11;
-            this.cbx_expense.Text = "지출";
-            this.cbx_expense.UseVisualStyleBackColor = true;
-            this.cbx_expense.CheckedChanged += new System.EventHandler(this.cbx_expense_CheckedChanged);
+            this.chk_expense.AutoSize = true;
+            this.chk_expense.Checked = true;
+            this.chk_expense.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_expense.Location = new System.Drawing.Point(94, 195);
+            this.chk_expense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_expense.Name = "chk_expense";
+            this.chk_expense.Size = new System.Drawing.Size(70, 22);
+            this.chk_expense.TabIndex = 11;
+            this.chk_expense.Text = "지출";
+            this.chk_expense.UseVisualStyleBackColor = true;
+            this.chk_expense.CheckedChanged += new System.EventHandler(this.chk_expense_CheckedChanged);
             // 
             // statusStrip1
             // 
@@ -695,14 +702,24 @@ namespace AccountBook.Views
             this.dgv_expenseType.Size = new System.Drawing.Size(368, 214);
             this.dgv_expenseType.TabIndex = 0;
             // 
+            // btn_saveCategory
+            // 
+            this.btn_saveCategory.Location = new System.Drawing.Point(285, 359);
+            this.btn_saveCategory.Name = "btn_saveCategory";
+            this.btn_saveCategory.Size = new System.Drawing.Size(107, 34);
+            this.btn_saveCategory.TabIndex = 3;
+            this.btn_saveCategory.Text = "항목추가";
+            this.btn_saveCategory.UseVisualStyleBackColor = true;
+            this.btn_saveCategory.Click += new System.EventHandler(this.btn_saveCategory_Click);
+            // 
             // AccountView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1457, 878);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.cbx_expense);
-            this.Controls.Add(this.cbx_income);
+            this.Controls.Add(this.chk_expense);
+            this.Controls.Add(this.chk_income);
             this.Controls.Add(this.lbl_totalRemain);
             this.Controls.Add(this.lbl_totalExpense);
             this.Controls.Add(this.lbl_totalIncome);
@@ -770,21 +787,21 @@ namespace AccountBook.Views
         private System.Windows.Forms.ComboBox cbx_expenseTypeSearch;
         private System.Windows.Forms.ComboBox cbx_categorySearch;
         private System.Windows.Forms.Button btn_deleteAccount;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_expenseAmount;
+        private System.Windows.Forms.ComboBox cbx_expenseCategory;
+        private System.Windows.Forms.ComboBox cbx_store;
+        private System.Windows.Forms.TextBox txt_expenseDescription;
         private System.Windows.Forms.Label lbl_totalIncome;
         private System.Windows.Forms.Label lbl_totalExpense;
         private System.Windows.Forms.Label lbl_totalRemain;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.CheckBox cbx_income;
-        private System.Windows.Forms.CheckBox cbx_expense;
+        private System.Windows.Forms.ComboBox cbx_expenseType;
+        private System.Windows.Forms.ComboBox cbx_incomeCategory;
+        private System.Windows.Forms.TextBox txt_incomeAmount;
+        private System.Windows.Forms.TextBox txt_incomeDescription;
+        private System.Windows.Forms.TextBox txt_saveCategory;
+        private System.Windows.Forms.ComboBox cbx_saveCategory;
+        private System.Windows.Forms.CheckBox chk_income;
+        private System.Windows.Forms.CheckBox chk_expense;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
@@ -803,6 +820,7 @@ namespace AccountBook.Views
         private System.Windows.Forms.DataGridView dgv_expenseCategory;
         private System.Windows.Forms.DataGridView dgv_incomeCategory;
         private System.Windows.Forms.DataGridView dgv_expenseType;
+        private System.Windows.Forms.Button btn_saveCategory;
     }
 }
 
