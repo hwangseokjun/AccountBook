@@ -29,6 +29,7 @@ namespace AccountBook.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountView));
             this.gbx_search = new System.Windows.Forms.GroupBox();
             this.txt_descriptionSearch = new System.Windows.Forms.TextBox();
             this.btn_search = new System.Windows.Forms.Button();
@@ -67,18 +68,31 @@ namespace AccountBook.Views
             this.txt_incomeAmount = new System.Windows.Forms.TextBox();
             this.txt_incomeDescription = new System.Windows.Forms.TextBox();
             this.gbx_category = new System.Windows.Forms.GroupBox();
+            this.chk_showDeletedCategory = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_saveCategoryText = new System.Windows.Forms.TextBox();
             this.btn_saveCategory = new System.Windows.Forms.Button();
             this.txt_saveExpenseCategoryAmount = new System.Windows.Forms.TextBox();
             this.cbx_saveCategory = new System.Windows.Forms.ComboBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tab_expenseCategory = new System.Windows.Forms.TabPage();
             this.dgv_expenseCategory = new System.Windows.Forms.DataGridView();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.btn_deleteExpenseCategory = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_incomeCategory = new System.Windows.Forms.TabPage();
             this.dgv_incomeCategory = new System.Windows.Forms.DataGridView();
+            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
+            this.btn_deleteIncomeCategory = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_expenseType = new System.Windows.Forms.TabPage();
             this.dgv_expenseType = new System.Windows.Forms.DataGridView();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
+            this.btn_deleteExpenseType = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_store = new System.Windows.Forms.TabPage();
             this.dgv_store = new System.Windows.Forms.DataGridView();
+            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
+            this.btn_deleteStore = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_account = new System.Windows.Forms.DataGridView();
             this.btn_deleteAccount = new System.Windows.Forms.Button();
             this.lbl_totalIncome = new System.Windows.Forms.Label();
@@ -89,10 +103,6 @@ namespace AccountBook.Views
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbl_startDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_endDate = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txt_saveCategoryText = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.gbx_search.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.gbx_account.SuspendLayout();
@@ -103,18 +113,23 @@ namespace AccountBook.Views
             this.tabControl.SuspendLayout();
             this.tab_expenseCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_expenseCategory)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.tab_incomeCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_incomeCategory)).BeginInit();
+            this.menuStrip3.SuspendLayout();
             this.tab_expenseType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_expenseType)).BeginInit();
+            this.menuStrip4.SuspendLayout();
             this.tab_store.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_store)).BeginInit();
+            this.menuStrip5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_account)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbx_search
             // 
+            resources.ApplyResources(this.gbx_search, "gbx_search");
             this.gbx_search.Controls.Add(this.txt_descriptionSearch);
             this.gbx_search.Controls.Add(this.btn_search);
             this.gbx_search.Controls.Add(this.cbx_storeSearch);
@@ -122,119 +137,87 @@ namespace AccountBook.Views
             this.gbx_search.Controls.Add(this.cbx_categorySearch);
             this.gbx_search.Controls.Add(this.dtp_to);
             this.gbx_search.Controls.Add(this.dtp_from);
-            this.gbx_search.Location = new System.Drawing.Point(12, 45);
             this.gbx_search.Name = "gbx_search";
-            this.gbx_search.Size = new System.Drawing.Size(598, 79);
-            this.gbx_search.TabIndex = 0;
             this.gbx_search.TabStop = false;
-            this.gbx_search.Text = "검색조건";
             // 
             // txt_descriptionSearch
             // 
-            this.txt_descriptionSearch.Location = new System.Drawing.Point(260, 46);
+            resources.ApplyResources(this.txt_descriptionSearch, "txt_descriptionSearch");
             this.txt_descriptionSearch.Name = "txt_descriptionSearch";
-            this.txt_descriptionSearch.Size = new System.Drawing.Size(249, 21);
-            this.txt_descriptionSearch.TabIndex = 6;
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(515, 19);
+            resources.ApplyResources(this.btn_search, "btn_search");
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(73, 49);
-            this.btn_search.TabIndex = 5;
-            this.btn_search.Text = "검색";
             this.btn_search.UseVisualStyleBackColor = true;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // cbx_storeSearch
             // 
+            resources.ApplyResources(this.cbx_storeSearch, "cbx_storeSearch");
             this.cbx_storeSearch.FormattingEnabled = true;
-            this.cbx_storeSearch.Location = new System.Drawing.Point(133, 47);
             this.cbx_storeSearch.Name = "cbx_storeSearch";
-            this.cbx_storeSearch.Size = new System.Drawing.Size(121, 20);
-            this.cbx_storeSearch.TabIndex = 4;
             // 
             // cbx_expenseTypeSearch
             // 
+            resources.ApplyResources(this.cbx_expenseTypeSearch, "cbx_expenseTypeSearch");
             this.cbx_expenseTypeSearch.FormattingEnabled = true;
-            this.cbx_expenseTypeSearch.Location = new System.Drawing.Point(6, 47);
             this.cbx_expenseTypeSearch.Name = "cbx_expenseTypeSearch";
-            this.cbx_expenseTypeSearch.Size = new System.Drawing.Size(121, 20);
-            this.cbx_expenseTypeSearch.TabIndex = 3;
             // 
             // cbx_categorySearch
             // 
+            resources.ApplyResources(this.cbx_categorySearch, "cbx_categorySearch");
             this.cbx_categorySearch.FormattingEnabled = true;
-            this.cbx_categorySearch.Location = new System.Drawing.Point(388, 20);
             this.cbx_categorySearch.Name = "cbx_categorySearch";
-            this.cbx_categorySearch.Size = new System.Drawing.Size(121, 20);
-            this.cbx_categorySearch.TabIndex = 2;
             // 
             // dtp_to
             // 
-            this.dtp_to.CustomFormat = "";
-            this.dtp_to.Location = new System.Drawing.Point(182, 20);
+            resources.ApplyResources(this.dtp_to, "dtp_to");
             this.dtp_to.Name = "dtp_to";
-            this.dtp_to.Size = new System.Drawing.Size(200, 21);
-            this.dtp_to.TabIndex = 1;
             // 
             // dtp_from
             // 
-            this.dtp_from.CustomFormat = "";
-            this.dtp_from.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtp_from.Location = new System.Drawing.Point(6, 20);
+            resources.ApplyResources(this.dtp_from, "dtp_from");
             this.dtp_from.Name = "dtp_from";
-            this.dtp_from.Size = new System.Drawing.Size(170, 21);
-            this.dtp_from.TabIndex = 0;
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_budget,
             this.btn_statistic});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1020, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // btn_budget
             // 
+            resources.ApplyResources(this.btn_budget, "btn_budget");
             this.btn_budget.Name = "btn_budget";
-            this.btn_budget.Size = new System.Drawing.Size(67, 22);
-            this.btn_budget.Text = "예산현황";
             this.btn_budget.Click += new System.EventHandler(this.btn_budget_Click);
             // 
             // btn_statistic
             // 
+            resources.ApplyResources(this.btn_statistic, "btn_statistic");
             this.btn_statistic.Name = "btn_statistic";
-            this.btn_statistic.Size = new System.Drawing.Size(43, 22);
-            this.btn_statistic.Text = "통계";
             // 
             // gbx_account
             // 
+            resources.ApplyResources(this.gbx_account, "gbx_account");
             this.gbx_account.Controls.Add(this.tabControl2);
-            this.gbx_account.Location = new System.Drawing.Point(680, 45);
             this.gbx_account.Name = "gbx_account";
-            this.gbx_account.Size = new System.Drawing.Size(281, 256);
-            this.gbx_account.TabIndex = 2;
             this.gbx_account.TabStop = false;
-            this.gbx_account.Text = "입력하기";
             // 
             // tabControl2
             // 
+            resources.ApplyResources(this.tabControl2, "tabControl2");
             this.tabControl2.Controls.Add(this.tab_expense);
             this.tabControl2.Controls.Add(this.tab_income);
-            this.tabControl2.Location = new System.Drawing.Point(6, 20);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(269, 231);
-            this.tabControl2.TabIndex = 0;
             // 
             // tab_expense
             // 
+            resources.ApplyResources(this.tab_expense, "tab_expense");
             this.tab_expense.Controls.Add(this.label9);
             this.tab_expense.Controls.Add(this.dtp_saveExpense);
             this.tab_expense.Controls.Add(this.label6);
@@ -248,128 +231,83 @@ namespace AccountBook.Views
             this.tab_expense.Controls.Add(this.cbx_expenseCategory);
             this.tab_expense.Controls.Add(this.cbx_store);
             this.tab_expense.Controls.Add(this.txt_expenseDescription);
-            this.tab_expense.Location = new System.Drawing.Point(4, 22);
             this.tab_expense.Name = "tab_expense";
-            this.tab_expense.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tab_expense.Size = new System.Drawing.Size(261, 205);
-            this.tab_expense.TabIndex = 0;
-            this.tab_expense.Text = "지출";
             this.tab_expense.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 147);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 12);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "일자";
             // 
             // dtp_saveExpense
             // 
-            this.dtp_saveExpense.Location = new System.Drawing.Point(106, 143);
-            this.dtp_saveExpense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            resources.ApplyResources(this.dtp_saveExpense, "dtp_saveExpense");
             this.dtp_saveExpense.Name = "dtp_saveExpense";
-            this.dtp_saveExpense.Size = new System.Drawing.Size(145, 21);
-            this.dtp_saveExpense.TabIndex = 12;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 119);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "지출분류";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 93);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "구매처";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 63);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "금액";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 36);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "내용";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 8);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "카테고리";
             // 
             // btn_saveExpenseAccount
             // 
-            this.btn_saveExpenseAccount.Location = new System.Drawing.Point(96, 181);
+            resources.ApplyResources(this.btn_saveExpenseAccount, "btn_saveExpenseAccount");
             this.btn_saveExpenseAccount.Name = "btn_saveExpenseAccount";
-            this.btn_saveExpenseAccount.Size = new System.Drawing.Size(75, 23);
-            this.btn_saveExpenseAccount.TabIndex = 1;
-            this.btn_saveExpenseAccount.Text = "저장";
             this.btn_saveExpenseAccount.UseVisualStyleBackColor = true;
             this.btn_saveExpenseAccount.Click += new System.EventHandler(this.btn_saveExpenseAccount_Click);
             // 
             // cbx_expenseType
             // 
+            resources.ApplyResources(this.cbx_expenseType, "cbx_expenseType");
             this.cbx_expenseType.FormattingEnabled = true;
-            this.cbx_expenseType.Location = new System.Drawing.Point(106, 116);
             this.cbx_expenseType.Name = "cbx_expenseType";
-            this.cbx_expenseType.Size = new System.Drawing.Size(145, 20);
-            this.cbx_expenseType.TabIndex = 5;
             // 
             // txt_expenseAmount
             // 
-            this.txt_expenseAmount.Location = new System.Drawing.Point(106, 60);
+            resources.ApplyResources(this.txt_expenseAmount, "txt_expenseAmount");
             this.txt_expenseAmount.Name = "txt_expenseAmount";
-            this.txt_expenseAmount.Size = new System.Drawing.Size(145, 21);
-            this.txt_expenseAmount.TabIndex = 4;
             this.txt_expenseAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_expenseAmount_KeyPress);
             // 
             // cbx_expenseCategory
             // 
+            resources.ApplyResources(this.cbx_expenseCategory, "cbx_expenseCategory");
             this.cbx_expenseCategory.FormattingEnabled = true;
-            this.cbx_expenseCategory.Location = new System.Drawing.Point(106, 7);
             this.cbx_expenseCategory.Name = "cbx_expenseCategory";
-            this.cbx_expenseCategory.Size = new System.Drawing.Size(145, 20);
-            this.cbx_expenseCategory.TabIndex = 3;
             // 
             // cbx_store
             // 
+            resources.ApplyResources(this.cbx_store, "cbx_store");
             this.cbx_store.FormattingEnabled = true;
-            this.cbx_store.Location = new System.Drawing.Point(106, 89);
             this.cbx_store.Name = "cbx_store";
-            this.cbx_store.Size = new System.Drawing.Size(145, 20);
-            this.cbx_store.TabIndex = 2;
             // 
             // txt_expenseDescription
             // 
-            this.txt_expenseDescription.Location = new System.Drawing.Point(106, 33);
+            resources.ApplyResources(this.txt_expenseDescription, "txt_expenseDescription");
             this.txt_expenseDescription.Name = "txt_expenseDescription";
-            this.txt_expenseDescription.Size = new System.Drawing.Size(145, 21);
-            this.txt_expenseDescription.TabIndex = 1;
             // 
             // tab_income
             // 
+            resources.ApplyResources(this.tab_income, "tab_income");
             this.tab_income.Controls.Add(this.dtp_saveIncome);
             this.tab_income.Controls.Add(this.label10);
             this.tab_income.Controls.Add(this.btn_saveIncomeAccount);
@@ -379,95 +317,63 @@ namespace AccountBook.Views
             this.tab_income.Controls.Add(this.cbx_incomeCategory);
             this.tab_income.Controls.Add(this.txt_incomeAmount);
             this.tab_income.Controls.Add(this.txt_incomeDescription);
-            this.tab_income.Location = new System.Drawing.Point(4, 22);
             this.tab_income.Name = "tab_income";
-            this.tab_income.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tab_income.Size = new System.Drawing.Size(261, 205);
-            this.tab_income.TabIndex = 1;
-            this.tab_income.Text = "수입";
             this.tab_income.UseVisualStyleBackColor = true;
             // 
             // dtp_saveIncome
             // 
-            this.dtp_saveIncome.Location = new System.Drawing.Point(106, 89);
-            this.dtp_saveIncome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            resources.ApplyResources(this.dtp_saveIncome, "dtp_saveIncome");
             this.dtp_saveIncome.Name = "dtp_saveIncome";
-            this.dtp_saveIncome.Size = new System.Drawing.Size(145, 21);
-            this.dtp_saveIncome.TabIndex = 10;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 93);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(29, 12);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "일자";
             // 
             // btn_saveIncomeAccount
             // 
-            this.btn_saveIncomeAccount.Location = new System.Drawing.Point(96, 181);
+            resources.ApplyResources(this.btn_saveIncomeAccount, "btn_saveIncomeAccount");
             this.btn_saveIncomeAccount.Name = "btn_saveIncomeAccount";
-            this.btn_saveIncomeAccount.Size = new System.Drawing.Size(75, 23);
-            this.btn_saveIncomeAccount.TabIndex = 8;
-            this.btn_saveIncomeAccount.Text = "저장";
             this.btn_saveIncomeAccount.UseVisualStyleBackColor = true;
             this.btn_saveIncomeAccount.Click += new System.EventHandler(this.btn_saveIncomeAccount_Click);
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 63);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 12);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "금액";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 36);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 12);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "내용";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 8);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "카테고리";
             // 
             // cbx_incomeCategory
             // 
+            resources.ApplyResources(this.cbx_incomeCategory, "cbx_incomeCategory");
             this.cbx_incomeCategory.DropDownWidth = 145;
             this.cbx_incomeCategory.FormattingEnabled = true;
-            this.cbx_incomeCategory.Location = new System.Drawing.Point(106, 7);
             this.cbx_incomeCategory.Name = "cbx_incomeCategory";
-            this.cbx_incomeCategory.Size = new System.Drawing.Size(145, 20);
-            this.cbx_incomeCategory.TabIndex = 3;
             // 
             // txt_incomeAmount
             // 
-            this.txt_incomeAmount.Location = new System.Drawing.Point(106, 60);
+            resources.ApplyResources(this.txt_incomeAmount, "txt_incomeAmount");
             this.txt_incomeAmount.Name = "txt_incomeAmount";
-            this.txt_incomeAmount.Size = new System.Drawing.Size(145, 21);
-            this.txt_incomeAmount.TabIndex = 2;
             this.txt_incomeAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_incomeAmount_KeyPress);
             // 
             // txt_incomeDescription
             // 
-            this.txt_incomeDescription.Location = new System.Drawing.Point(106, 33);
+            resources.ApplyResources(this.txt_incomeDescription, "txt_incomeDescription");
             this.txt_incomeDescription.Name = "txt_incomeDescription";
-            this.txt_incomeDescription.Size = new System.Drawing.Size(145, 21);
-            this.txt_incomeDescription.TabIndex = 1;
             // 
             // gbx_category
             // 
+            resources.ApplyResources(this.gbx_category, "gbx_category");
+            this.gbx_category.Controls.Add(this.chk_showDeletedCategory);
             this.gbx_category.Controls.Add(this.label13);
             this.gbx_category.Controls.Add(this.label12);
             this.gbx_category.Controls.Add(this.label11);
@@ -476,288 +382,281 @@ namespace AccountBook.Views
             this.gbx_category.Controls.Add(this.txt_saveExpenseCategoryAmount);
             this.gbx_category.Controls.Add(this.cbx_saveCategory);
             this.gbx_category.Controls.Add(this.tabControl);
-            this.gbx_category.Location = new System.Drawing.Point(680, 316);
             this.gbx_category.Name = "gbx_category";
-            this.gbx_category.Size = new System.Drawing.Size(281, 276);
-            this.gbx_category.TabIndex = 3;
             this.gbx_category.TabStop = false;
-            this.gbx_category.Text = "분류 생성하기";
+            // 
+            // chk_showDeletedCategory
+            // 
+            resources.ApplyResources(this.chk_showDeletedCategory, "chk_showDeletedCategory");
+            this.chk_showDeletedCategory.Name = "chk_showDeletedCategory";
+            this.chk_showDeletedCategory.UseVisualStyleBackColor = true;
+            this.chk_showDeletedCategory.CheckedChanged += new System.EventHandler(this.chk_showDeletedCategory_CheckedChanged);
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // txt_saveCategoryText
+            // 
+            resources.ApplyResources(this.txt_saveCategoryText, "txt_saveCategoryText");
+            this.txt_saveCategoryText.Name = "txt_saveCategoryText";
             // 
             // btn_saveCategory
             // 
-            this.btn_saveCategory.Location = new System.Drawing.Point(196, 245);
-            this.btn_saveCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            resources.ApplyResources(this.btn_saveCategory, "btn_saveCategory");
             this.btn_saveCategory.Name = "btn_saveCategory";
-            this.btn_saveCategory.Size = new System.Drawing.Size(75, 23);
-            this.btn_saveCategory.TabIndex = 3;
-            this.btn_saveCategory.Text = "항목추가";
             this.btn_saveCategory.UseVisualStyleBackColor = true;
             this.btn_saveCategory.Click += new System.EventHandler(this.btn_saveCategory_Click);
             // 
             // txt_saveExpenseCategoryAmount
             // 
-            this.txt_saveExpenseCategoryAmount.Location = new System.Drawing.Point(134, 206);
+            resources.ApplyResources(this.txt_saveExpenseCategoryAmount, "txt_saveExpenseCategoryAmount");
             this.txt_saveExpenseCategoryAmount.Name = "txt_saveExpenseCategoryAmount";
-            this.txt_saveExpenseCategoryAmount.Size = new System.Drawing.Size(137, 21);
-            this.txt_saveExpenseCategoryAmount.TabIndex = 2;
             this.txt_saveExpenseCategoryAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_saveExpenseCategoryAmount_KeyPress);
             // 
             // cbx_saveCategory
             // 
+            resources.ApplyResources(this.cbx_saveCategory, "cbx_saveCategory");
             this.cbx_saveCategory.FormattingEnabled = true;
             this.cbx_saveCategory.Items.AddRange(new object[] {
-            "지출항목",
-            "수입항목",
-            "지출종류",
-            "구매처"});
-            this.cbx_saveCategory.Location = new System.Drawing.Point(6, 207);
+            resources.GetString("cbx_saveCategory.Items"),
+            resources.GetString("cbx_saveCategory.Items1"),
+            resources.GetString("cbx_saveCategory.Items2"),
+            resources.GetString("cbx_saveCategory.Items3")});
             this.cbx_saveCategory.Name = "cbx_saveCategory";
-            this.cbx_saveCategory.Size = new System.Drawing.Size(122, 20);
-            this.cbx_saveCategory.TabIndex = 1;
             this.cbx_saveCategory.SelectedIndexChanged += new System.EventHandler(this.cbx_saveCategory_SelectedIndexChanged);
             // 
             // tabControl
             // 
+            resources.ApplyResources(this.tabControl, "tabControl");
             this.tabControl.Controls.Add(this.tab_expenseCategory);
             this.tabControl.Controls.Add(this.tab_incomeCategory);
             this.tabControl.Controls.Add(this.tab_expenseType);
             this.tabControl.Controls.Add(this.tab_store);
-            this.tabControl.Location = new System.Drawing.Point(6, 19);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(269, 169);
-            this.tabControl.TabIndex = 0;
             // 
             // tab_expenseCategory
             // 
+            resources.ApplyResources(this.tab_expenseCategory, "tab_expenseCategory");
             this.tab_expenseCategory.Controls.Add(this.dgv_expenseCategory);
-            this.tab_expenseCategory.Location = new System.Drawing.Point(4, 22);
+            this.tab_expenseCategory.Controls.Add(this.menuStrip2);
             this.tab_expenseCategory.Name = "tab_expenseCategory";
-            this.tab_expenseCategory.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tab_expenseCategory.Size = new System.Drawing.Size(261, 143);
-            this.tab_expenseCategory.TabIndex = 0;
-            this.tab_expenseCategory.Text = "지출 항목";
             this.tab_expenseCategory.UseVisualStyleBackColor = true;
             // 
             // dgv_expenseCategory
             // 
+            resources.ApplyResources(this.dgv_expenseCategory, "dgv_expenseCategory");
+            this.dgv_expenseCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_expenseCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_expenseCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_expenseCategory.Location = new System.Drawing.Point(3, 3);
-            this.dgv_expenseCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_expenseCategory.Name = "dgv_expenseCategory";
-            this.dgv_expenseCategory.RowHeadersWidth = 62;
+            this.dgv_expenseCategory.RowHeadersVisible = false;
             this.dgv_expenseCategory.RowTemplate.Height = 30;
-            this.dgv_expenseCategory.Size = new System.Drawing.Size(255, 137);
-            this.dgv_expenseCategory.TabIndex = 0;
+            this.dgv_expenseCategory.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_expenseCategory_CellFormatting);
+            this.dgv_expenseCategory.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_expenseCategory_CellValueChanged);
+            // 
+            // menuStrip2
+            // 
+            resources.ApplyResources(this.menuStrip2, "menuStrip2");
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_deleteExpenseCategory});
+            this.menuStrip2.Name = "menuStrip2";
+            // 
+            // btn_deleteExpenseCategory
+            // 
+            resources.ApplyResources(this.btn_deleteExpenseCategory, "btn_deleteExpenseCategory");
+            this.btn_deleteExpenseCategory.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btn_deleteExpenseCategory.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_deleteExpenseCategory.Name = "btn_deleteExpenseCategory";
+            this.btn_deleteExpenseCategory.Click += new System.EventHandler(this.btn_deleteExpenseCategory_Click);
             // 
             // tab_incomeCategory
             // 
+            resources.ApplyResources(this.tab_incomeCategory, "tab_incomeCategory");
             this.tab_incomeCategory.Controls.Add(this.dgv_incomeCategory);
-            this.tab_incomeCategory.Location = new System.Drawing.Point(4, 22);
+            this.tab_incomeCategory.Controls.Add(this.menuStrip3);
             this.tab_incomeCategory.Name = "tab_incomeCategory";
-            this.tab_incomeCategory.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tab_incomeCategory.Size = new System.Drawing.Size(261, 143);
-            this.tab_incomeCategory.TabIndex = 3;
-            this.tab_incomeCategory.Text = "수입 항목";
             this.tab_incomeCategory.UseVisualStyleBackColor = true;
             // 
             // dgv_incomeCategory
             // 
+            resources.ApplyResources(this.dgv_incomeCategory, "dgv_incomeCategory");
+            this.dgv_incomeCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_incomeCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_incomeCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_incomeCategory.Location = new System.Drawing.Point(3, 3);
-            this.dgv_incomeCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_incomeCategory.Name = "dgv_incomeCategory";
-            this.dgv_incomeCategory.RowHeadersWidth = 62;
+            this.dgv_incomeCategory.RowHeadersVisible = false;
             this.dgv_incomeCategory.RowTemplate.Height = 30;
-            this.dgv_incomeCategory.Size = new System.Drawing.Size(255, 137);
-            this.dgv_incomeCategory.TabIndex = 0;
+            this.dgv_incomeCategory.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_incomeCategory_CellFormatting);
+            // 
+            // menuStrip3
+            // 
+            resources.ApplyResources(this.menuStrip3, "menuStrip3");
+            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_deleteIncomeCategory});
+            this.menuStrip3.Name = "menuStrip3";
+            // 
+            // btn_deleteIncomeCategory
+            // 
+            resources.ApplyResources(this.btn_deleteIncomeCategory, "btn_deleteIncomeCategory");
+            this.btn_deleteIncomeCategory.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btn_deleteIncomeCategory.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_deleteIncomeCategory.Name = "btn_deleteIncomeCategory";
+            this.btn_deleteIncomeCategory.Click += new System.EventHandler(this.btn_deleteIncomeCategory_Click);
             // 
             // tab_expenseType
             // 
+            resources.ApplyResources(this.tab_expenseType, "tab_expenseType");
             this.tab_expenseType.Controls.Add(this.dgv_expenseType);
-            this.tab_expenseType.Location = new System.Drawing.Point(4, 22);
+            this.tab_expenseType.Controls.Add(this.menuStrip4);
             this.tab_expenseType.Name = "tab_expenseType";
-            this.tab_expenseType.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tab_expenseType.Size = new System.Drawing.Size(261, 143);
-            this.tab_expenseType.TabIndex = 1;
-            this.tab_expenseType.Text = "지출종류";
             this.tab_expenseType.UseVisualStyleBackColor = true;
             // 
             // dgv_expenseType
             // 
+            resources.ApplyResources(this.dgv_expenseType, "dgv_expenseType");
+            this.dgv_expenseType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_expenseType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_expenseType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_expenseType.Location = new System.Drawing.Point(3, 3);
-            this.dgv_expenseType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_expenseType.Name = "dgv_expenseType";
-            this.dgv_expenseType.RowHeadersWidth = 62;
+            this.dgv_expenseType.RowHeadersVisible = false;
             this.dgv_expenseType.RowTemplate.Height = 30;
-            this.dgv_expenseType.Size = new System.Drawing.Size(255, 137);
-            this.dgv_expenseType.TabIndex = 0;
+            this.dgv_expenseType.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_expenseType_CellFormatting);
+            // 
+            // menuStrip4
+            // 
+            resources.ApplyResources(this.menuStrip4, "menuStrip4");
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_deleteExpenseType});
+            this.menuStrip4.Name = "menuStrip4";
+            // 
+            // btn_deleteExpenseType
+            // 
+            resources.ApplyResources(this.btn_deleteExpenseType, "btn_deleteExpenseType");
+            this.btn_deleteExpenseType.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btn_deleteExpenseType.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_deleteExpenseType.Name = "btn_deleteExpenseType";
+            this.btn_deleteExpenseType.Click += new System.EventHandler(this.btn_deleteExpenseType_Click);
             // 
             // tab_store
             // 
+            resources.ApplyResources(this.tab_store, "tab_store");
             this.tab_store.Controls.Add(this.dgv_store);
-            this.tab_store.Location = new System.Drawing.Point(4, 22);
+            this.tab_store.Controls.Add(this.menuStrip5);
             this.tab_store.Name = "tab_store";
-            this.tab_store.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tab_store.Size = new System.Drawing.Size(261, 143);
-            this.tab_store.TabIndex = 2;
-            this.tab_store.Text = "구매처";
             this.tab_store.UseVisualStyleBackColor = true;
             // 
             // dgv_store
             // 
+            resources.ApplyResources(this.dgv_store, "dgv_store");
+            this.dgv_store.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_store.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_store.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_store.Location = new System.Drawing.Point(3, 3);
-            this.dgv_store.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_store.Name = "dgv_store";
-            this.dgv_store.RowHeadersWidth = 62;
+            this.dgv_store.RowHeadersVisible = false;
             this.dgv_store.RowTemplate.Height = 30;
-            this.dgv_store.Size = new System.Drawing.Size(255, 137);
-            this.dgv_store.TabIndex = 0;
+            this.dgv_store.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_store_CellFormatting);
+            // 
+            // menuStrip5
+            // 
+            resources.ApplyResources(this.menuStrip5, "menuStrip5");
+            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_deleteStore});
+            this.menuStrip5.Name = "menuStrip5";
+            // 
+            // btn_deleteStore
+            // 
+            resources.ApplyResources(this.btn_deleteStore, "btn_deleteStore");
+            this.btn_deleteStore.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btn_deleteStore.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_deleteStore.Name = "btn_deleteStore";
+            this.btn_deleteStore.Click += new System.EventHandler(this.btn_deleteStore_Click);
             // 
             // dgv_account
             // 
+            resources.ApplyResources(this.dgv_account, "dgv_account");
+            this.dgv_account.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_account.Location = new System.Drawing.Point(12, 152);
             this.dgv_account.Name = "dgv_account";
-            this.dgv_account.RowHeadersWidth = 62;
+            this.dgv_account.RowHeadersVisible = false;
             this.dgv_account.RowTemplate.Height = 23;
-            this.dgv_account.Size = new System.Drawing.Size(598, 292);
-            this.dgv_account.TabIndex = 4;
+            this.dgv_account.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_account_CellFormatting);
+            this.dgv_account.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgv_account_CellValidating);
             this.dgv_account.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_account_CellValueChanged);
             // 
             // btn_deleteAccount
             // 
-            this.btn_deleteAccount.Location = new System.Drawing.Point(535, 456);
+            resources.ApplyResources(this.btn_deleteAccount, "btn_deleteAccount");
             this.btn_deleteAccount.Name = "btn_deleteAccount";
-            this.btn_deleteAccount.Size = new System.Drawing.Size(75, 23);
-            this.btn_deleteAccount.TabIndex = 5;
-            this.btn_deleteAccount.Text = "삭제";
             this.btn_deleteAccount.UseVisualStyleBackColor = true;
             this.btn_deleteAccount.Click += new System.EventHandler(this.btn_deleteAccount_Click);
             // 
             // lbl_totalIncome
             // 
-            this.lbl_totalIncome.AutoSize = true;
-            this.lbl_totalIncome.Location = new System.Drawing.Point(16, 461);
+            resources.ApplyResources(this.lbl_totalIncome, "lbl_totalIncome");
+            this.lbl_totalIncome.ForeColor = System.Drawing.Color.Green;
             this.lbl_totalIncome.Name = "lbl_totalIncome";
-            this.lbl_totalIncome.Size = new System.Drawing.Size(38, 12);
-            this.lbl_totalIncome.TabIndex = 6;
-            this.lbl_totalIncome.Text = "label1";
             // 
             // lbl_totalExpense
             // 
-            this.lbl_totalExpense.AutoSize = true;
-            this.lbl_totalExpense.Location = new System.Drawing.Point(192, 461);
+            resources.ApplyResources(this.lbl_totalExpense, "lbl_totalExpense");
+            this.lbl_totalExpense.ForeColor = System.Drawing.Color.Red;
             this.lbl_totalExpense.Name = "lbl_totalExpense";
-            this.lbl_totalExpense.Size = new System.Drawing.Size(38, 12);
-            this.lbl_totalExpense.TabIndex = 8;
-            this.lbl_totalExpense.Text = "label3";
             // 
             // lbl_totalRemain
             // 
-            this.lbl_totalRemain.AutoSize = true;
-            this.lbl_totalRemain.Location = new System.Drawing.Point(356, 461);
+            resources.ApplyResources(this.lbl_totalRemain, "lbl_totalRemain");
             this.lbl_totalRemain.Name = "lbl_totalRemain";
-            this.lbl_totalRemain.Size = new System.Drawing.Size(38, 12);
-            this.lbl_totalRemain.TabIndex = 9;
-            this.lbl_totalRemain.Text = "label4";
             // 
             // chk_income
             // 
-            this.chk_income.AutoSize = true;
+            resources.ApplyResources(this.chk_income, "chk_income");
             this.chk_income.Checked = true;
             this.chk_income.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_income.Location = new System.Drawing.Point(12, 130);
             this.chk_income.Name = "chk_income";
-            this.chk_income.Size = new System.Drawing.Size(48, 16);
-            this.chk_income.TabIndex = 10;
-            this.chk_income.Text = "수입";
             this.chk_income.UseVisualStyleBackColor = true;
             this.chk_income.CheckedChanged += new System.EventHandler(this.chk_income_CheckedChanged);
             // 
             // chk_expense
             // 
-            this.chk_expense.AutoSize = true;
+            resources.ApplyResources(this.chk_expense, "chk_expense");
             this.chk_expense.Checked = true;
             this.chk_expense.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_expense.Location = new System.Drawing.Point(66, 130);
             this.chk_expense.Name = "chk_expense";
-            this.chk_expense.Size = new System.Drawing.Size(48, 16);
-            this.chk_expense.TabIndex = 11;
-            this.chk_expense.Text = "지출";
             this.chk_expense.UseVisualStyleBackColor = true;
             this.chk_expense.CheckedChanged += new System.EventHandler(this.chk_expense_CheckedChanged);
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbl_startDate,
             this.lbl_endDate});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 596);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1020, 22);
-            this.statusStrip1.TabIndex = 12;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // lbl_startDate
             // 
+            resources.ApplyResources(this.lbl_startDate, "lbl_startDate");
             this.lbl_startDate.Name = "lbl_startDate";
-            this.lbl_startDate.Size = new System.Drawing.Size(73, 17);
-            this.lbl_startDate.Text = "lbl_startDate";
             // 
             // lbl_endDate
             // 
+            resources.ApplyResources(this.lbl_endDate, "lbl_endDate");
             this.lbl_endDate.Name = "lbl_endDate";
-            this.lbl_endDate.Size = new System.Drawing.Size(121, 17);
-            this.lbl_endDate.Text = "toolStripStatusLabel2";
-            // 
-            // txt_saveCategoryText
-            // 
-            this.txt_saveCategoryText.Location = new System.Drawing.Point(6, 245);
-            this.txt_saveCategoryText.Name = "txt_saveCategoryText";
-            this.txt_saveCategoryText.Size = new System.Drawing.Size(185, 21);
-            this.txt_saveCategoryText.TabIndex = 4;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 191);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 12);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "분류 선택";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(132, 191);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 12);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "한도금액";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 230);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 12);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "항목 이름";
             // 
             // AccountView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 618);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.chk_expense);
             this.Controls.Add(this.chk_income);
@@ -770,9 +669,10 @@ namespace AccountBook.Views
             this.Controls.Add(this.gbx_account);
             this.Controls.Add(this.gbx_search);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "AccountView";
-            this.Text = "AccountView";
             this.gbx_search.ResumeLayout(false);
             this.gbx_search.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -787,13 +687,25 @@ namespace AccountBook.Views
             this.gbx_category.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.tab_expenseCategory.ResumeLayout(false);
+            this.tab_expenseCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_expenseCategory)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.tab_incomeCategory.ResumeLayout(false);
+            this.tab_incomeCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_incomeCategory)).EndInit();
+            this.menuStrip3.ResumeLayout(false);
+            this.menuStrip3.PerformLayout();
             this.tab_expenseType.ResumeLayout(false);
+            this.tab_expenseType.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_expenseType)).EndInit();
+            this.menuStrip4.ResumeLayout(false);
+            this.menuStrip4.PerformLayout();
             this.tab_store.ResumeLayout(false);
+            this.tab_store.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_store)).EndInit();
+            this.menuStrip5.ResumeLayout(false);
+            this.menuStrip5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_account)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -868,6 +780,15 @@ namespace AccountBook.Views
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.MenuStrip menuStrip3;
+        private System.Windows.Forms.MenuStrip menuStrip4;
+        private System.Windows.Forms.MenuStrip menuStrip5;
+        private System.Windows.Forms.ToolStripMenuItem btn_deleteExpenseCategory;
+        private System.Windows.Forms.ToolStripMenuItem btn_deleteIncomeCategory;
+        private System.Windows.Forms.ToolStripMenuItem btn_deleteExpenseType;
+        private System.Windows.Forms.ToolStripMenuItem btn_deleteStore;
+        private System.Windows.Forms.CheckBox chk_showDeletedCategory;
     }
 }
 

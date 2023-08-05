@@ -12,24 +12,38 @@ namespace AccountBook.Models
     {
         [Browsable(false)]
         public int Id { get; set; }
-        [DisplayName("선택")]
+        
+        [DisplayName(" ")]
         public bool IsSelected { get; set; } = false;
+        
         [Browsable(false)]
         public bool Visible { get; set; } = true;
+        
         [DisplayName("날짜")]
         public DateTime Date { get; set; }
+
+        [ReadOnly(true)]
         [DisplayName("구매처")]
         public Store Store { get; set; }
+
+        [ReadOnly(true)]
         [DisplayName("수입 항목")]
         public IncomeCategory IncomeCategory { get; set; }
+
+        [ReadOnly(true)]
         [DisplayName("지출 항목")]
         public ExpenseCategory ExpenseCategory { get; set; }
+
+        [ReadOnly(true)]
         [DisplayName("지출 분류")]
         public ExpenseType ExpenseType { get; set; }
+
         [DisplayName("설명")]
         public string Description { get; set; }
+        
         [DisplayName("수입금액")]
         public int IncomeAmount { get; set; }
+        
         [DisplayName("지출금액")]
         public int ExpenseAmount { get; set; }
     }

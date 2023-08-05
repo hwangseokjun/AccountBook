@@ -47,8 +47,9 @@ namespace AccountBook.Views
             {
                 _expenseCategories = value;
                 dgv_expenseCategory.DataSource = null;
-                var showing = _expenseCategories.FindAll(x => x.IsDeleted == false);
+                var showing = chk_showDeletedCategory.Checked ? _expenseCategories : _expenseCategories.FindAll(x => x.IsDeleted == false);
                 dgv_expenseCategory.DataSource = showing;
+                cbx_expenseCategory.DataSource = null;
                 cbx_expenseCategory.DataSource = showing;
                 cbx_expenseCategory.DisplayMember = "Name";
             }
@@ -60,8 +61,9 @@ namespace AccountBook.Views
             {
                 _incomeCategories = value;
                 dgv_incomeCategory.DataSource = null;
-                var showing = _incomeCategories.FindAll(x => x.IsDeleted == false);
+                var showing = chk_showDeletedCategory.Checked ? _incomeCategories : _incomeCategories.FindAll(x => x.IsDeleted == false);
                 dgv_incomeCategory.DataSource = showing;
+                cbx_incomeCategory.DataSource = null;
                 cbx_incomeCategory.DataSource = showing;
                 cbx_incomeCategory.DisplayMember = "Name";
             }
@@ -73,8 +75,9 @@ namespace AccountBook.Views
             {
                 _expenseTypes = value;
                 dgv_expenseType.DataSource = null;
-                var showing = _expenseTypes.FindAll(x => x.IsDeleted == false);
+                var showing = chk_showDeletedCategory.Checked ? _expenseTypes : _expenseTypes.FindAll(x => x.IsDeleted == false);
                 dgv_expenseType.DataSource = showing;
+                cbx_expenseType.DataSource = null;
                 cbx_expenseType.DataSource = showing;
                 cbx_expenseType.DisplayMember = "Name";
             }
@@ -86,8 +89,9 @@ namespace AccountBook.Views
             {
                 _stores = value;
                 dgv_store.DataSource = null;
-                var showing = _stores.FindAll(x => x.IsDeleted == false);
+                var showing = chk_showDeletedCategory.Checked ? _stores : _stores.FindAll(x => x.IsDeleted == false);
                 dgv_store.DataSource = showing;
+                cbx_store.DataSource = null;
                 cbx_store.DataSource = showing;
                 cbx_store.DisplayMember = "Name";
             }
@@ -172,6 +176,13 @@ namespace AccountBook.Views
 
         private void dgv_account_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            //if (0 <= e.RowIndex && 0 <= e.ColumnIndex) 
+            //{
+                
+            //}
+            DataGridViewRow changedRow = dgv_account.Rows[e.RowIndex];
+            var account = (Account)changedRow.DataBoundItem;
+            UpdateAccount?.Invoke(account);
         }
 
         private void chk_expense_CheckedChanged(object sender, EventArgs e)
@@ -299,6 +310,158 @@ namespace AccountBook.Views
                 var accountPresenter = new BudgetSummaryPresenter(budetSummaryModel, accountRepository, commonCodeRepository);
                 accountPresenter.Initialize();
                 budetSummaryModel.ShowDialog();
+            }
+        }
+
+        private void dgv_account_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.Value is null) 
+            {
+                return;
+            }
+
+            if (e.ColumnIndex == 7 && 0 < (int)e.Value)
+            {
+                e.CellStyle.ForeColor = Color.Green;
+            }
+            else if (e.ColumnIndex == 8 && 0 < (int)e.Value) 
+            {
+                e.CellStyle.ForeColor = Color.Red;
+            }
+        }
+
+        private void dgv_expenseCategory_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow changedRow = dgv_expenseCategory.Rows[e.RowIndex];
+            var expenseCategory = (ExpenseCategory)changedRow.DataBoundItem;
+            UpdateCategory?.Invoke(expenseCategory);
+        }
+
+        private void dgv_account_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (!dgv_account.IsCurrentCellDirty) 
+            {
+                return;
+            }
+        }
+
+        private void btn_deleteExpenseCategory_Click(object sender, EventArgs e)
+        {
+            var categories = ExpenseCategories.FindAll(x => x.IsSelected);
+
+            foreach (var category in categories) 
+            {
+                RemoveCategory?.Invoke(category.Id);
+                category.IsDeleted = true;
+            }
+
+            ExpenseCategories = ExpenseCategories;
+        }
+
+        private void btn_deleteIncomeCategory_Click(object sender, EventArgs e)
+        {
+            var categories = IncomeCategories.FindAll(x => x.IsSelected);
+
+            foreach (var category in categories)
+            {
+                RemoveCategory?.Invoke(category.Id);
+                category.IsDeleted = true;
+            }
+
+            IncomeCategories = IncomeCategories;
+        }
+
+        private void btn_deleteExpenseType_Click(object sender, EventArgs e)
+        {
+            var categories = ExpenseTypes.FindAll(x => x.IsSelected);
+
+            foreach (var category in categories)
+            {
+                RemoveCategory?.Invoke(category.Id);
+                category.IsDeleted = true;
+            }
+
+            ExpenseTypes = ExpenseTypes;
+        }
+
+        private void btn_deleteStore_Click(object sender, EventArgs e)
+        {
+            var categories = Stores.FindAll(x => x.IsSelected);
+
+            foreach (var category in categories)
+            {
+                RemoveCategory?.Invoke(category.Id);
+                category.IsDeleted = true;
+            }
+
+            Stores = Stores;
+        }
+
+        private void chk_showDeletedCategory_CheckedChanged(object sender, EventArgs e)
+        {
+            ExpenseCategories = ExpenseCategories;
+            IncomeCategories = IncomeCategories;
+            ExpenseTypes = ExpenseTypes;
+            Stores = Stores;
+        }
+
+        private void dgv_expenseCategory_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.Value is null)
+            {
+                return;
+            }
+
+            DataGridViewRow changedRow = dgv_expenseCategory.Rows[e.RowIndex];
+            var expenseCategory = (ExpenseCategory)changedRow.DataBoundItem;
+            if (expenseCategory.IsDeleted) 
+            {
+                e.CellStyle.BackColor = Color.LightSalmon;
+            }
+        }
+
+        private void dgv_incomeCategory_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.Value is null)
+            {
+                return;
+            }
+
+            DataGridViewRow changedRow = dgv_incomeCategory.Rows[e.RowIndex];
+            var incomeCategory = (IncomeCategory)changedRow.DataBoundItem;
+            if (incomeCategory.IsDeleted)
+            {
+                e.CellStyle.BackColor = Color.LightSalmon;
+            }
+        }
+
+        private void dgv_expenseType_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.Value is null)
+            {
+                return;
+            }
+
+            DataGridViewRow changedRow = dgv_expenseType.Rows[e.RowIndex];
+            var expenseType = (ExpenseType)changedRow.DataBoundItem;
+            if (expenseType.IsDeleted)
+            {
+                e.CellStyle.BackColor = Color.LightSalmon;
+            }
+        }
+
+        private void dgv_store_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.Value is null)
+            {
+                return;
+            }
+
+            DataGridViewRow changedRow = dgv_store.Rows[e.RowIndex];
+            var store = (Store)changedRow.DataBoundItem;
+            if (store.IsDeleted)
+            {
+                e.CellStyle.BackColor = Color.LightSalmon;
             }
         }
     }

@@ -17,7 +17,12 @@ namespace AccountBook.DataAccess
 
         public int DeleteById(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
+            {
+                connection.Delete(new CommonCode { Id = id });
+
+                return id;
+            }
         }
 
         public IEnumerable<CommonCode> GetAll()
@@ -32,7 +37,12 @@ namespace AccountBook.DataAccess
 
         public CommonCode GetById(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
+            {
+                var commonCode = connection.Get<CommonCode>(id);
+
+                return commonCode;
+            }
         }
 
         public int Insert(CommonCode entity)
@@ -47,7 +57,10 @@ namespace AccountBook.DataAccess
 
         public void Update(CommonCode entity)
         {
-            throw new NotImplementedException();
+            using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
+            {
+                connection.Update<CommonCode>(entity);
+            }
         }
     }
 }

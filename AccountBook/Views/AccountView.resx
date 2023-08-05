@@ -117,10 +117,1789 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <data name="&gt;&gt;txt_descriptionSearch.Name" xml:space="preserve">
+    <value>txt_descriptionSearch</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 12</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Parent" xml:space="preserve">
+    <value>gbx_account</value>
+  </data>
+  <data name="lbl_totalExpense.Text" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 292</value>
+  </data>
+  <data name="&gt;&gt;tab_expenseType.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txt_descriptionSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 46</value>
+  </data>
+  <data name="&gt;&gt;cbx_store.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="menuStrip5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 24</value>
+  </data>
+  <data name="tab_expenseCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 177</value>
+  </data>
+  <data name="cbx_saveCategory.Items3" xml:space="preserve">
+    <value>구매처</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>내용</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_totalRemain.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txt_descriptionSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgv_account.Size" type="System.Drawing.Size, System.Drawing">
+    <value>662, 463</value>
+  </data>
+  <data name="&gt;&gt;menuStrip4.Parent" xml:space="preserve">
+    <value>tab_expenseType</value>
+  </data>
+  <data name="btn_saveIncomeAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_expenseDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalRemain.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btn_saveExpenseAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 181</value>
+  </data>
+  <data name="tab_incomeCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_search.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 49</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseTypeSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbx_categorySearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 20</value>
+  </data>
+  <data name="&gt;&gt;menuStrip4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbx_category.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btn_saveExpenseAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="dgv_expenseType.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="cbx_incomeCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btn_deleteExpenseType.Text" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="btn_deleteExpenseCategory.Text" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="txt_incomeDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btn_saveIncomeAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 181</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dgv_expenseType.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chk_showDeletedCategory.Parent" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="&gt;&gt;gbx_category.Name" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 203</value>
+  </data>
+  <data name="btn_saveCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txt_saveCategoryText.Parent" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="btn_deleteStore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="dtp_saveExpense.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;dgv_expenseCategory.Name" xml:space="preserve">
+    <value>dgv_expenseCategory</value>
+  </data>
+  <data name="btn_statistic.Text" xml:space="preserve">
+    <value>통계</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 654</value>
+  </data>
+  <data name="&gt;&gt;dtp_to.Name" xml:space="preserve">
+    <value>dtp_to</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btn_budget.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip3.Text" xml:space="preserve">
+    <value>menuStrip3</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;btn_saveExpenseAccount.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dtp_to.CustomFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgv_incomeCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 8</value>
+  </data>
+  <data name="tab_expense.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="cbx_storeSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 47</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 63</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="&gt;&gt;chk_expense.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbx_search.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="dtp_saveExpense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 143</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="cbx_expenseType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 20</value>
+  </data>
+  <data name="&gt;&gt;dgv_store.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalExpense.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_statistic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 22</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="menuStrip3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 24</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 119</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>분류 선택</value>
+  </data>
+  <data name="&gt;&gt;tab_expenseCategory.Name" xml:space="preserve">
+    <value>tab_expenseCategory</value>
+  </data>
+  <data name="cbx_saveCategory.Items" xml:space="preserve">
+    <value>지출항목</value>
+  </data>
+  <data name="txt_descriptionSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;tab_income.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_expense.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_saveIncomeAccount.Text" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>우리집 가계부 v.0.5</value>
+  </data>
+  <data name="&gt;&gt;cbx_categorySearch.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dtp_saveIncome.Name" xml:space="preserve">
+    <value>dtp_saveIncome</value>
+  </data>
+  <data name="dgv_expenseCategory.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseType.Name" xml:space="preserve">
+    <value>cbx_expenseType</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;chk_income.Name" xml:space="preserve">
+    <value>chk_income</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chk_showDeletedCategory.Text" xml:space="preserve">
+    <value>삭제항목보기</value>
+  </data>
+  <data name="cbx_saveCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 20</value>
+  </data>
+  <data name="txt_expenseDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="&gt;&gt;tab_incomeCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_descriptionSearch.Parent" xml:space="preserve">
+    <value>gbx_search</value>
+  </data>
+  <data name="menuStrip2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dtp_saveIncome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="&gt;&gt;lbl_startDate.Name" xml:space="preserve">
+    <value>lbl_startDate</value>
+  </data>
+  <data name="lbl_endDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 17</value>
+  </data>
+  <data name="&gt;&gt;cbx_saveCategory.Parent" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="&gt;&gt;txt_saveCategoryText.Name" xml:space="preserve">
+    <value>txt_saveCategoryText</value>
+  </data>
+  <data name="&gt;&gt;txt_saveExpenseCategoryAmount.Parent" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="btn_budget.Text" xml:space="preserve">
+    <value>예산현황</value>
+  </data>
+  <data name="btn_deleteAccount.Text" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseCategory.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalRemain.Name" xml:space="preserve">
+    <value>lbl_totalRemain</value>
+  </data>
+  <data name="&gt;&gt;cbx_incomeCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="&gt;&gt;chk_income.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dgv_store.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbx_saveCategory.Items1" xml:space="preserve">
+    <value>수입항목</value>
+  </data>
+  <data name="btn_deleteIncomeCategory.Text" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="dtp_from.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbx_categorySearch.Parent" xml:space="preserve">
+    <value>gbx_search</value>
+  </data>
+  <data name="gbx_search.Size" type="System.Drawing.Size, System.Drawing">
+    <value>646, 79</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btn_saveCategory.Text" xml:space="preserve">
+    <value>항목추가</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chk_showDeletedCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="menuStrip5.Text" xml:space="preserve">
+    <value>menuStrip5</value>
+  </data>
+  <data name="txt_descriptionSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 21</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>항목 이름</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 12</value>
+  </data>
+  <data name="&gt;&gt;cbx_store.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dtp_saveIncome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>967, 24</value>
+  </data>
+  <data name="dgv_incomeCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tab_expenseType.Text" xml:space="preserve">
+    <value>지출종류</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="btn_search.Text" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="&gt;&gt;cbx_storeSearch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tab_expenseType.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;dgv_account.Name" xml:space="preserve">
+    <value>dgv_account</value>
+  </data>
+  <data name="&gt;&gt;gbx_account.Name" xml:space="preserve">
+    <value>gbx_account</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="tab_expenseCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txt_incomeDescription.Name" xml:space="preserve">
+    <value>txt_incomeDescription</value>
+  </data>
+  <data name="dtp_saveIncome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 89</value>
+  </data>
+  <data name="&gt;&gt;dtp_saveIncome.Parent" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="&gt;&gt;menuStrip3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_saveIncomeAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tab_incomeCategory.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 36</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dgv_incomeCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 147</value>
+  </data>
+  <data name="chk_income.Text" xml:space="preserve">
+    <value>수입</value>
+  </data>
+  <data name="dgv_expenseCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="cbx_categorySearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 20</value>
+  </data>
+  <data name="&gt;&gt;txt_expenseDescription.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbx_expenseTypeSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 20</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalIncome.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txt_expenseAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="cbx_expenseType.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txt_incomeDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dtp_saveIncome.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;dtp_from.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_saveCategoryText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 307</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 12</value>
+  </data>
+  <data name="&gt;&gt;cbx_saveCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_storeSearch.Name" xml:space="preserve">
+    <value>cbx_storeSearch</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 147</value>
+  </data>
+  <data name="chk_expense.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="&gt;&gt;menuStrip5.Name" xml:space="preserve">
+    <value>menuStrip5</value>
+  </data>
+  <data name="txt_incomeDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="gbx_search.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 45</value>
+  </data>
+  <data name="dgv_store.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;chk_expense.Name" xml:space="preserve">
+    <value>chk_expense</value>
+  </data>
+  <data name="btn_search.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;chk_showDeletedCategory.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_search.Name" xml:space="preserve">
+    <value>btn_search</value>
+  </data>
+  <data name="tab_expense.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 205</value>
+  </data>
+  <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 231</value>
+  </data>
+  <data name="chk_expense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 130</value>
+  </data>
+  <data name="lbl_endDate.Text" xml:space="preserve">
+    <value>toolStripStatusLabel2</value>
+  </data>
+  <data name="&gt;&gt;dtp_from.Name" xml:space="preserve">
+    <value>dtp_from</value>
+  </data>
+  <data name="btn_saveCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 307</value>
+  </data>
+  <data name="&gt;&gt;btn_search.Parent" xml:space="preserve">
+    <value>gbx_search</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="cbx_store.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tab_incomeCategory.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>카테고리</value>
+  </data>
+  <data name="&gt;&gt;gbx_search.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 250</value>
+  </data>
+  <data name="&gt;&gt;tab_expense.Parent" xml:space="preserve">
+    <value>tabControl2</value>
+  </data>
+  <data name="lbl_startDate.Text" xml:space="preserve">
+    <value>lbl_startDate</value>
+  </data>
+  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 1, 0, 1</value>
+  </data>
+  <data name="&gt;&gt;dgv_incomeCategory.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 250</value>
+  </data>
+  <data name="txt_saveExpenseCategoryAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 21</value>
+  </data>
+  <data name="cbx_store.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 20</value>
+  </data>
+  <data name="btn_saveCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="tab_income.Text" xml:space="preserve">
+    <value>수입</value>
+  </data>
+  <data name="&gt;&gt;menuStrip2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_saveCategory.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tab_expenseCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="dtp_saveExpense.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;txt_saveCategoryText.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseType.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dgv_account.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txt_saveExpenseCategoryAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_budget.Name" xml:space="preserve">
+    <value>btn_budget</value>
+  </data>
+  <data name="cbx_expenseCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 7</value>
+  </data>
+  <data name="dgv_incomeCategory.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;dtp_to.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="gbx_search.Text" xml:space="preserve">
+    <value>검색조건</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;tab_store.Name" xml:space="preserve">
+    <value>tab_store</value>
+  </data>
+  <data name="tab_incomeCategory.Text" xml:space="preserve">
+    <value>수입 항목</value>
+  </data>
+  <data name="&gt;&gt;tab_income.Parent" xml:space="preserve">
+    <value>tabControl2</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalExpense.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="menuStrip5.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dgv_store.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;txt_expenseAmount.Name" xml:space="preserve">
+    <value>txt_expenseAmount</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="menuStrip5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_incomeCategory.Parent" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="&gt;&gt;cbx_storeSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_statistic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tab_expenseType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="txt_expenseAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="chk_showDeletedCategory.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgv_incomeCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>카테고리</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseTypeSearch.Parent" xml:space="preserve">
+    <value>gbx_search</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Name" xml:space="preserve">
+    <value>tabControl2</value>
+  </data>
+  <data name="&gt;&gt;txt_incomeAmount.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="chk_expense.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="dtp_saveExpense.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="&gt;&gt;chk_showDeletedCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;txt_expenseAmount.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;tab_store.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;tab_income.Name" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tab_expenseCategory.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 36</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dgv_expenseType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 147</value>
+  </data>
+  <data name="&gt;&gt;lbl_startDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtp_saveIncome.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txt_expenseDescription.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="btn_saveExpenseAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 0, 10, 0</value>
+  </data>
+  <data name="&gt;&gt;tab_store.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="tab_expense.Text" xml:space="preserve">
+    <value>지출</value>
+  </data>
+  <data name="dgv_account.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tab_store.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteStore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tab_incomeCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 177</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalIncome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_deleteExpenseType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="lbl_totalExpense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 628</value>
+  </data>
+  <data name="gbx_category.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 335</value>
+  </data>
+  <data name="&gt;&gt;dtp_saveExpense.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tab_incomeCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteIncomeCategory.Name" xml:space="preserve">
+    <value>btn_deleteIncomeCategory</value>
+  </data>
+  <data name="btn_budget.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 22</value>
+  </data>
+  <data name="chk_income.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dgv_expenseType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgv_expenseType.Name" xml:space="preserve">
+    <value>dgv_expenseType</value>
+  </data>
+  <data name="txt_expenseDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chk_expense.Text" xml:space="preserve">
+    <value>지출</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbx_categorySearch.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btn_saveExpenseAccount.Text" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseTypeSearch.Name" xml:space="preserve">
+    <value>cbx_expenseTypeSearch</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>내용</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>금액</value>
+  </data>
+  <data name="&gt;&gt;btn_search.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="menuStrip3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cbx_expenseTypeSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalIncome.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="gbx_category.Text" xml:space="preserve">
+    <value>분류 생성하기</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txt_incomeAmount.Name" xml:space="preserve">
+    <value>txt_incomeAmount</value>
+  </data>
+  <data name="gbx_account.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgv_expenseCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;cbx_categorySearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgv_expenseType.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="menuStrip2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 24</value>
+  </data>
+  <data name="txt_incomeDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 33</value>
+  </data>
+  <data name="tab_expenseCategory.Text" xml:space="preserve">
+    <value>지출 항목</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>금액</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="tabControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 20</value>
+  </data>
+  <data name="&gt;&gt;dgv_account.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_saveExpenseAccount.Name" xml:space="preserve">
+    <value>btn_saveExpenseAccount</value>
+  </data>
+  <data name="btn_search.Location" type="System.Drawing.Point, System.Drawing">
+    <value>567, 19</value>
+  </data>
+  <data name="btn_deleteIncomeCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="lbl_totalExpense.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;dgv_store.Parent" xml:space="preserve">
+    <value>tab_store</value>
+  </data>
+  <data name="dtp_from.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;menuStrip3.Parent" xml:space="preserve">
+    <value>tab_incomeCategory</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 8</value>
+  </data>
+  <data name="dgv_store.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 147</value>
+  </data>
+  <data name="tab_expenseType.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalExpense.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="cbx_storeSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="dtp_to.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 20</value>
+  </data>
+  <data name="tab_income.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteExpenseType.Name" xml:space="preserve">
+    <value>btn_deleteExpenseType</value>
+  </data>
+  <data name="cbx_saveCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalIncome.Name" xml:space="preserve">
+    <value>lbl_totalIncome</value>
+  </data>
+  <data name="&gt;&gt;chk_income.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tab_expenseType.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="chk_income.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="&gt;&gt;dgv_incomeCategory.Name" xml:space="preserve">
+    <value>dgv_incomeCategory</value>
+  </data>
+  <data name="&gt;&gt;dgv_store.Name" xml:space="preserve">
+    <value>dgv_store</value>
+  </data>
+  <data name="&gt;&gt;cbx_saveCategory.Name" xml:space="preserve">
+    <value>cbx_saveCategory</value>
+  </data>
+  <data name="&gt;&gt;menuStrip2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;menuStrip4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="menuStrip4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="dgv_account.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;gbx_search.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseCategory.Name" xml:space="preserve">
+    <value>cbx_expenseCategory</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="txt_incomeAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="&gt;&gt;chk_showDeletedCategory.Name" xml:space="preserve">
+    <value>chk_showDeletedCategory</value>
+  </data>
+  <data name="&gt;&gt;tab_expenseCategory.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="dtp_from.CustomFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbl_totalExpense.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 16</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbx_incomeCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 7</value>
+  </data>
+  <data name="&gt;&gt;menuStrip2.Parent" xml:space="preserve">
+    <value>tab_expenseCategory</value>
+  </data>
+  <data name="&gt;&gt;dtp_to.Parent" xml:space="preserve">
+    <value>gbx_search</value>
+  </data>
+  <data name="&gt;&gt;txt_incomeDescription.Parent" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>구매처</value>
+  </data>
+  <data name="lbl_totalIncome.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_saveCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="cbx_saveCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 266</value>
+  </data>
+  <data name="&gt;&gt;dgv_incomeCategory.Parent" xml:space="preserve">
+    <value>tab_incomeCategory</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AccountView</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgv_expenseType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 27</value>
+  </data>
+  <data name="&gt;&gt;cbx_storeSearch.Parent" xml:space="preserve">
+    <value>gbx_search</value>
+  </data>
+  <data name="gbx_account.Text" xml:space="preserve">
+    <value>입력하기</value>
+  </data>
+  <data name="&gt;&gt;dgv_expenseCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteExpenseCategory.Name" xml:space="preserve">
+    <value>btn_deleteExpenseCategory</value>
+  </data>
+  <data name="lbl_totalRemain.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dtp_to.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 21</value>
+  </data>
+  <data name="menuStrip3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="btn_deleteAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txt_expenseAmount.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;txt_saveExpenseCategoryAmount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseCategory.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tab_income.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="cbx_store.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 89</value>
+  </data>
+  <data name="btn_deleteExpenseCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="lbl_totalIncome.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tab_expenseType.Name" xml:space="preserve">
+    <value>tab_expenseType</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_saveCategoryText.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;txt_incomeAmount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="menuStrip4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="dgv_store.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 27</value>
+  </data>
+  <data name="dgv_incomeCategory.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;dtp_from.Parent" xml:space="preserve">
+    <value>gbx_search</value>
+  </data>
+  <data name="&gt;&gt;cbx_categorySearch.Name" xml:space="preserve">
+    <value>cbx_categorySearch</value>
+  </data>
+  <data name="tab_income.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;menuStrip5.Parent" xml:space="preserve">
+    <value>tab_store</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalRemain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tab_expense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;txt_incomeAmount.Parent" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="lbl_totalRemain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 628</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_incomeDescription.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;lbl_endDate.Name" xml:space="preserve">
+    <value>lbl_endDate</value>
+  </data>
+  <data name="&gt;&gt;tab_income.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chk_income.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dtp_saveExpense.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="cbx_expenseTypeSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cbx_expenseCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 20</value>
+  </data>
+  <data name="gbx_account.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 45</value>
+  </data>
+  <data name="lbl_totalIncome.Text" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>지출분류</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="chk_income.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 130</value>
+  </data>
+  <data name="dgv_store.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btn_deleteAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>583, 621</value>
+  </data>
+  <data name="&gt;&gt;btn_saveExpenseAccount.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="gbx_account.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 256</value>
+  </data>
+  <data name="chk_expense.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_totalRemain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 16</value>
+  </data>
+  <data name="menuStrip2.Text" xml:space="preserve">
+    <value>menuStrip2</value>
+  </data>
+  <data name="&gt;&gt;tab_expenseCategory.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="txt_incomeAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 60</value>
+  </data>
+  <data name="dgv_expenseCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 147</value>
+  </data>
+  <data name="&gt;&gt;tab_incomeCategory.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;btn_saveIncomeAccount.Name" xml:space="preserve">
+    <value>btn_saveIncomeAccount</value>
+  </data>
+  <data name="lbl_totalIncome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 16</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_totalRemain.Text" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;txt_saveExpenseCategoryAmount.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dgv_expenseCategory.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="gbx_category.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 316</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 63</value>
+  </data>
+  <data name="&gt;&gt;dtp_saveExpense.Name" xml:space="preserve">
+    <value>dtp_saveExpense</value>
+  </data>
+  <data name="dtp_from.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 21</value>
+  </data>
+  <data name="dgv_incomeCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 27</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="lbl_totalIncome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalExpense.Name" xml:space="preserve">
+    <value>lbl_totalExpense</value>
+  </data>
+  <data name="&gt;&gt;tab_expense.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_totalExpense.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dgv_expenseCategory.Parent" xml:space="preserve">
+    <value>tab_expenseCategory</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteAccount.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dgv_expenseType.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gbx_account.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbx_expenseType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 116</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tab_store.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgv_expenseCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 27</value>
+  </data>
+  <data name="btn_saveIncomeAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteExpenseType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 93</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_startDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <data name="&gt;&gt;menuStrip2.Name" xml:space="preserve">
+    <value>menuStrip2</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteStore.Name" xml:space="preserve">
+    <value>btn_deleteStore</value>
+  </data>
+  <data name="txt_saveExpenseCategoryAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 266</value>
+  </data>
+  <data name="menuStrip2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbx_search.Name" xml:space="preserve">
+    <value>gbx_search</value>
+  </data>
+  <data name="&gt;&gt;tab_incomeCategory.Name" xml:space="preserve">
+    <value>tab_incomeCategory</value>
+  </data>
+  <data name="&gt;&gt;btn_saveIncomeAccount.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txt_expenseDescription.Name" xml:space="preserve">
+    <value>txt_expenseDescription</value>
+  </data>
+  <data name="txt_expenseAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 60</value>
+  </data>
+  <data name="&gt;&gt;tab_expenseType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtp_saveExpense.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tab_expenseType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 177</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 93</value>
+  </data>
+  <data name="cbx_expenseCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteAccount.Name" xml:space="preserve">
+    <value>btn_deleteAccount</value>
+  </data>
+  <data name="&gt;&gt;dgv_account.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_saveCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_saveCategoryText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_expense.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_saveExpenseAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>일자</value>
+  </data>
+  <data name="&gt;&gt;tab_expense.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txt_saveExpenseCategoryAmount.Name" xml:space="preserve">
+    <value>txt_saveExpenseCategoryAmount</value>
+  </data>
+  <data name="txt_saveCategoryText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 21</value>
+  </data>
+  <data name="lbl_totalIncome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 628</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>일자</value>
+  </data>
+  <data name="btn_deleteAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>967, 676</value>
+  </data>
+  <data name="tab_income.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 205</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>967, 22</value>
+  </data>
+  <data name="&gt;&gt;gbx_account.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_saveIncomeAccount.Parent" xml:space="preserve">
+    <value>tab_income</value>
+  </data>
+  <data name="&gt;&gt;tab_expense.Name" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;dtp_to.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_store.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;gbx_category.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbx_category.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dtp_from.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 20</value>
+  </data>
+  <data name="&gt;&gt;gbx_account.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;gbx_category.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btn_saveCategory.Name" xml:space="preserve">
+    <value>btn_saveCategory</value>
+  </data>
+  <data name="dgv_account.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 152</value>
+  </data>
+  <data name="btn_deleteStore.Text" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;cbx_saveCategory.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btn_statistic.Name" xml:space="preserve">
+    <value>btn_statistic</value>
+  </data>
+  <data name="&gt;&gt;menuStrip3.Name" xml:space="preserve">
+    <value>menuStrip3</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteIncomeCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgv_expenseType.Parent" xml:space="preserve">
+    <value>tab_expenseType</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;txt_descriptionSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_search.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseTypeSearch.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dgv_expenseCategory.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dgv_expenseType.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;tab_expenseCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtp_from.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dtp_saveIncome.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="tab_expense.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chk_showDeletedCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 16</value>
+  </data>
+  <data name="&gt;&gt;cbx_expenseType.Parent" xml:space="preserve">
+    <value>tab_expense</value>
+  </data>
+  <data name="&gt;&gt;cbx_incomeCategory.Name" xml:space="preserve">
+    <value>cbx_incomeCategory</value>
+  </data>
+  <data name="cbx_storeSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 20</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteExpenseCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_totalExpense.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="tab_store.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 177</value>
+  </data>
+  <data name="tab_store.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>한도금액</value>
+  </data>
+  <data name="tab_store.Text" xml:space="preserve">
+    <value>구매처</value>
+  </data>
+  <data name="&gt;&gt;lbl_totalRemain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip4.Text" xml:space="preserve">
+    <value>menuStrip4</value>
+  </data>
+  <data name="&gt;&gt;dgv_store.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_expenseDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 33</value>
+  </data>
+  <data name="&gt;&gt;btn_saveCategory.Parent" xml:space="preserve">
+    <value>gbx_category</value>
+  </data>
+  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="chk_showDeletedCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 14</value>
+  </data>
+  <data name="&gt;&gt;cbx_store.Name" xml:space="preserve">
+    <value>cbx_store</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 36</value>
+  </data>
+  <data name="chk_income.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cbx_incomeCategory.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;menuStrip4.Name" xml:space="preserve">
+    <value>menuStrip4</value>
+  </data>
+  <data name="txt_incomeAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="gbx_search.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tab_store.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="lbl_totalRemain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;lbl_endDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dtp_to.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_deleteAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cbx_incomeCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 20</value>
+  </data>
+  <data name="menuStrip4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 24</value>
+  </data>
+  <data name="&gt;&gt;txt_expenseAmount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbx_saveCategory.Items2" xml:space="preserve">
+    <value>지출종류</value>
+  </data>
+  <metadata name="menuStrip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>408, 17</value>
+  </metadata>
+  <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>292, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ko-KR</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="menuStrip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>524, 17</value>
   </metadata>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>175, 17</value>
+  </metadata>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="menuStrip5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>640, 17</value>
   </metadata>
 </root>

@@ -12,10 +12,17 @@ namespace AccountBook.Models
     {
         [Browsable(false)]
         public int Id { get; set; }
+
         [Browsable(false)]
         public bool IsDeleted { get; set; }
+
+        [DisplayName(" ")]
+        public bool IsSelected { get; set; } = false;
+
+        [ReadOnly(true)]
         [DisplayName("카테고리명")]
         public string Name { get; set; }
+
         [DisplayName("한도금액")]
         public int? Amount { get; set; }
 

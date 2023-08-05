@@ -1,4 +1,5 @@
-﻿using Dapper.Contrib.Extensions;
+﻿using AccountBook.Models;
+using Dapper.Contrib.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,5 +23,11 @@ namespace AccountBook.DataAccess
         public string Name { get; set; }
         public int? Amount { get; set; }
         public int IsDeleted { get; set; }
+
+        public void Update(BaseCategory baseCategory) 
+        {
+            Name = baseCategory.Name;
+            Amount = baseCategory.Amount;
+        }
     }
 }

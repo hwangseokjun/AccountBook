@@ -23,7 +23,12 @@ namespace AccountBook.DataAccess
 
         public int DeleteById(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SQLiteConnection(Constants.CONNECTION_STRING))
+            {
+                connection.Delete(new AccountEntity { Id = id });
+
+                return id;
+            }
         }
 
         public IEnumerable<AccountEntity> GetAll()

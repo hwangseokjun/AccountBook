@@ -29,80 +29,101 @@ namespace AccountBook.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BudgetSummaryView));
+            this.dtp_from = new System.Windows.Forms.DateTimePicker();
+            this.dtp_to = new System.Windows.Forms.DateTimePicker();
+            this.dgv_budgetSummary = new System.Windows.Forms.DataGridView();
+            this.dgv_expenseCategory = new System.Windows.Forms.DataGridView();
             this.btn_search = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lbl_start = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_end = new System.Windows.Forms.ToolStripStatusLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_budgetSummary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_expenseCategory)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtp_from
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker1.TabIndex = 0;
+            resources.ApplyResources(this.dtp_from, "dtp_from");
+            this.dtp_from.Name = "dtp_from";
             // 
-            // dateTimePicker2
+            // dtp_to
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(218, 12);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker2.TabIndex = 1;
+            resources.ApplyResources(this.dtp_to, "dtp_to");
+            this.dtp_to.Name = "dtp_to";
             // 
-            // dataGridView1
+            // dgv_budgetSummary
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(537, 357);
-            this.dataGridView1.TabIndex = 2;
+            resources.ApplyResources(this.dgv_budgetSummary, "dgv_budgetSummary");
+            this.dgv_budgetSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_budgetSummary.Name = "dgv_budgetSummary";
+            this.dgv_budgetSummary.RowTemplate.Height = 23;
+            this.dgv_budgetSummary.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_budgetSummary_CellFormatting);
             // 
-            // dataGridView2
+            // dgv_expenseCategory
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(555, 46);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(233, 357);
-            this.dataGridView2.TabIndex = 3;
+            resources.ApplyResources(this.dgv_expenseCategory, "dgv_expenseCategory");
+            this.dgv_expenseCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_expenseCategory.Name = "dgv_expenseCategory";
+            this.dgv_expenseCategory.RowTemplate.Height = 23;
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(474, 12);
+            resources.ApplyResources(this.btn_search, "btn_search");
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(75, 23);
-            this.btn_search.TabIndex = 4;
-            this.btn_search.Text = "검색";
             this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // statusStrip1
+            // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbl_start,
+            this.lbl_end});
+            this.statusStrip1.Name = "statusStrip1";
+            // 
+            // lbl_start
+            // 
+            resources.ApplyResources(this.lbl_start, "lbl_start");
+            this.lbl_start.Name = "lbl_start";
+            // 
+            // lbl_end
+            // 
+            resources.ApplyResources(this.lbl_end, "lbl_end");
+            this.lbl_end.Name = "lbl_end";
             // 
             // BudgetSummaryView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 413);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dgv_expenseCategory);
+            this.Controls.Add(this.dgv_budgetSummary);
+            this.Controls.Add(this.dtp_to);
+            this.Controls.Add(this.dtp_from);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "BudgetSummaryView";
-            this.Text = "BudgetSummaryView";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_budgetSummary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_expenseCategory)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DateTimePicker dtp_from;
+        private System.Windows.Forms.DateTimePicker dtp_to;
+        private System.Windows.Forms.DataGridView dgv_budgetSummary;
+        private System.Windows.Forms.DataGridView dgv_expenseCategory;
         private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_start;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_end;
     }
 }

@@ -145,12 +145,17 @@ namespace AccountBook.Presenters
 
         public void ModifyCategory<T>(T category) where T : BaseCategory
         {
-
+            int id = category.Id;
+            CommonCode commonCode = _commonCodeRepository.GetById(id);
+            commonCode.Update(category);
+            _commonCodeRepository.Update(commonCode);
         }
 
         public void DeleteCategory(int id) 
-        { 
-        
+        {
+            CommonCode commonCode = _commonCodeRepository.GetById(id);
+            commonCode.IsDeleted = 1;
+            _commonCodeRepository.Update(commonCode);
         }
 
         private void SearchAccounts(SearchKeyword searchKeyword)
@@ -159,6 +164,8 @@ namespace AccountBook.Presenters
             string end = searchKeyword.End.ToString("yyyy-MM-dd");
             var accounts = _accountRepository.GetBetweenDate(start, end);
             _accountView.Accounts = ToAccount(accounts);
+            _accountView.StartDate = $"시작일: {start}";
+            _accountView.EndDate = $"종료일: {end}";
         }
 
         private List<Account> ToAccount(IEnumerable<AccountEntity> accountEntities) 
