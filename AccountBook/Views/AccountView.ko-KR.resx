@@ -118,6 +118,93 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gbx_search.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 35</value>
+  </data>
+  <data name="gbx_account.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 35</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 280</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 242</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 242</value>
+  </data>
+  <data name="txt_saveCategoryText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 295</value>
+  </data>
+  <data name="btn_saveCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 295</value>
+  </data>
+  <data name="txt_saveExpenseCategoryAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 257</value>
+  </data>
+  <data name="cbx_saveCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 257</value>
+  </data>
+  <data name="gbx_category.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 297</value>
+  </data>
+  <data name="gbx_category.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 323</value>
+  </data>
+  <data name="dgv_account.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 142</value>
+  </data>
+  <data name="dgv_account.Size" type="System.Drawing.Size, System.Drawing">
+    <value>662, 447</value>
+  </data>
+  <data name="btn_deleteAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 597</value>
+  </data>
+  <data name="lbl_totalIncome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 598</value>
+  </data>
+  <data name="lbl_totalExpense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 598</value>
+  </data>
+  <data name="lbl_totalRemain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 598</value>
+  </data>
+  <data name="chk_income.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 120</value>
+  </data>
+  <data name="chk_expense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 120</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 624</value>
+  </data>
+  <data name="btn_expenseCategoryUp.Text" xml:space="preserve">
+    <value>▲</value>
+  </data>
+  <data name="btn_expenseCategoryDown.Text" xml:space="preserve">
+    <value>▼</value>
+  </data>
+  <data name="btn_incomeCategoryUp.Text" xml:space="preserve">
+    <value>▲</value>
+  </data>
+  <data name="btn_incomeCategoryDown.Text" xml:space="preserve">
+    <value>▼</value>
+  </data>
+  <data name="btn_expenseTypeUp.Text" xml:space="preserve">
+    <value>▲</value>
+  </data>
+  <data name="btn_expenseTypeDown.Text" xml:space="preserve">
+    <value>▼</value>
+  </data>
+  <data name="btn_storeUp.Text" xml:space="preserve">
+    <value>▲</value>
+  </data>
+  <data name="btn_storeDown.Text" xml:space="preserve">
+    <value>▼</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>967, 646</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIADlTwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAAAFv

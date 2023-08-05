@@ -28,6 +28,7 @@ namespace AccountBook.DataAccess
         {
             Name = baseCategory.Name;
             Amount = baseCategory.Amount;
+            Sequence = baseCategory.Sequence;
         }
     }
 }

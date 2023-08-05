@@ -26,6 +26,9 @@ namespace AccountBook.Models
         [DisplayName("한도금액")]
         public int? Amount { get; set; }
 
+        [Browsable(false)]
+        public int? Sequence { get; set; }
+
         public override string ToString()
         {
             return Name;

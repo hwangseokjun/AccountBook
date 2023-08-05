@@ -57,7 +57,27 @@ namespace AccountBook.Presenters
 
         public void AddAccount(Account account) 
         {
-            int id = _accountRepository.Insert(new AccountEntity(account));
+            var expenseCategories = _accountView.ExpenseCategories;
+            var incomeCategories = _accountView.IncomeCategories;
+            var expenseTypes = _accountView.ExpenseTypes;
+            var stores = _accountView.Stores;
+
+            int storeId = stores.First(x => x.Name == account.Store).Id;
+            int expenseCategoryId = expenseCategories.First(x => x.Name == account.ExpenseCategory).Id;
+            int incomeCategoryId = incomeCategories.First(x => x.Name == account.IncomeCategory).Id;
+            int expenseTypeId = expenseTypes.First(x => x.Name == account.ExpenseType).Id;
+
+            int id = _accountRepository.Insert(new AccountEntity 
+            { 
+                Date = account.Date.ToString("yyyy-MM-dd"),
+                StoreId = storeId,
+                ExpenseCategoryId = expenseCategoryId,
+                IncomeCategoryId = incomeCategoryId,
+                ExpenseTypeId = expenseTypeId,
+                Description = account.Description,
+                IncomeAmount = account.IncomeAmount,
+                ExpenseAmount = account.ExpenseAmount
+            });
             var accounts = _accountView.Accounts;
             account.Id = id;
             accounts.Add(account);
@@ -68,8 +88,23 @@ namespace AccountBook.Presenters
         public void ModifyAccount(Account account) 
         {
             int id = account.Id;
+            var expenseCategories = _accountView.ExpenseCategories;
+            var incomeCategories = _accountView.IncomeCategories;
+            var expenseTypes = _accountView.ExpenseTypes;
+            var stores = _accountView.Stores;
+            int? storeId = stores.FirstOrDefault(x => x.Name == account.Store)?.Id;
+            int? expenseCategoryId = expenseCategories.FirstOrDefault(x => x.Name == account.ExpenseCategory)?.Id;
+            int? incomeCategoryId = incomeCategories.FirstOrDefault(x => x.Name == account.IncomeCategory)?.Id;
+            int? expenseTypeId = expenseTypes.FirstOrDefault(x => x.Name == account.ExpenseType)?.Id;
             AccountEntity accountEntity = _accountRepository.GetById(id);
-            accountEntity.Update(account);
+            accountEntity.Date = account.Date.ToString("yyyy-MM-dd");
+            accountEntity.StoreId = storeId;
+            accountEntity.ExpenseCategoryId = expenseCategoryId;
+            accountEntity.IncomeCategoryId = incomeCategoryId;
+            accountEntity.ExpenseTypeId = expenseTypeId;
+            accountEntity.Description = account.Description;
+            accountEntity.IncomeAmount = account.IncomeAmount;
+            accountEntity.ExpenseAmount = account.ExpenseAmount;
             _accountRepository.Update(accountEntity);
             CalculateRemains();
         }
@@ -182,10 +217,10 @@ namespace AccountBook.Presenters
                 {
                     Id = entity.Id,
                     Date = DateTime.Parse(entity.Date),
-                    Store = stores.FirstOrDefaultDeepCopy(x => x.Id == entity.StoreId),
-                    ExpenseCategory = expenseCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseCategoryId),
-                    ExpenseType = expenseTypes.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseTypeId),
-                    IncomeCategory = incomeCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.IncomeCategoryId),
+                    Store = stores.FirstOrDefaultDeepCopy(x => x.Id == entity.StoreId)?.Name,
+                    ExpenseCategory = expenseCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseCategoryId)?.Name,
+                    ExpenseType = expenseTypes.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseTypeId)?.Name,
+                    IncomeCategory = incomeCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.IncomeCategoryId)?.Name,
                     Description = entity.Description,
                     IncomeAmount = entity.IncomeAmount ?? 0,
                     ExpenseAmount = entity.ExpenseAmount ?? 0

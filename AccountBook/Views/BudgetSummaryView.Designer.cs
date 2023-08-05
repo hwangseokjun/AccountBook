@@ -64,8 +64,10 @@ namespace AccountBook.Views
             // dgv_expenseCategory
             // 
             resources.ApplyResources(this.dgv_expenseCategory, "dgv_expenseCategory");
+            this.dgv_expenseCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_expenseCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_expenseCategory.Name = "dgv_expenseCategory";
+            this.dgv_expenseCategory.RowHeadersVisible = false;
             this.dgv_expenseCategory.RowTemplate.Height = 23;
             // 
             // btn_search

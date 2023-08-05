@@ -37,6 +37,7 @@ namespace AccountBook.Views
                 _expenseCategories = value;
                 dgv_expenseCategory.DataSource = null;
                 dgv_expenseCategory.DataSource = _expenseCategories;
+                dgv_expenseCategory.Columns[0].Visible = false;
             }
         }
         public string StartDate 

@@ -22,21 +22,17 @@ namespace AccountBook.Models
         [DisplayName("날짜")]
         public DateTime Date { get; set; }
 
-        [ReadOnly(true)]
         [DisplayName("구매처")]
-        public Store Store { get; set; }
+        public string Store { get; set; }
 
-        [ReadOnly(true)]
         [DisplayName("수입 항목")]
-        public IncomeCategory IncomeCategory { get; set; }
+        public string IncomeCategory { get; set; }
 
-        [ReadOnly(true)]
         [DisplayName("지출 항목")]
-        public ExpenseCategory ExpenseCategory { get; set; }
+        public string ExpenseCategory { get; set; }
 
-        [ReadOnly(true)]
         [DisplayName("지출 분류")]
-        public ExpenseType ExpenseType { get; set; }
+        public string ExpenseType { get; set; }
 
         [DisplayName("설명")]
         public string Description { get; set; }

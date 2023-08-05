@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
@@ -127,9 +124,8 @@
   <data name="dgv_expenseCategory.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
+  <data name="&gt;&gt;dgv_budgetSummary.Name" xml:space="preserve">
+    <value>dgv_budgetSummary</value>
   </data>
   <data name="&gt;&gt;btn_search.Name" xml:space="preserve">
     <value>btn_search</value>
@@ -137,13 +133,16 @@
   <data name="&gt;&gt;lbl_end.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dtp_from.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 21</value>
+  </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
-  <data name="&gt;&gt;dgv_expenseCategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dtp_from.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIADlTwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAAAFv
@@ -496,20 +495,17 @@
   <data name="btn_search.Text" xml:space="preserve">
     <value>검색</value>
   </data>
-  <data name="&gt;&gt;lbl_end.Name" xml:space="preserve">
-    <value>lbl_end</value>
-  </data>
   <data name="lbl_end.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 17</value>
   </data>
-  <data name="&gt;&gt;dgv_expenseCategory.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbl_start.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 413</value>
   </data>
-  <data name="&gt;&gt;dgv_budgetSummary.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;dgv_expenseCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btn_search.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -523,14 +519,14 @@
   <data name="dgv_budgetSummary.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>예산현황보기</value>
-  </data>
   <data name="dgv_expenseCategory.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 357</value>
   </data>
   <data name="&gt;&gt;dtp_to.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 12</value>
   </data>
   <data name="&gt;&gt;dtp_from.Parent" xml:space="preserve">
     <value>$this</value>
@@ -538,20 +534,24 @@
   <data name="&gt;&gt;dtp_to.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;dgv_expenseCategory.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="lbl_start.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
   </data>
-  <data name="lbl_start.Text" xml:space="preserve">
-    <value>lbl_start</value>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 22</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 435</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 12</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="&gt;&gt;dgv_budgetSummary.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -562,14 +562,17 @@
   <data name="dtp_to.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;dgv_expenseCategory.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;dgv_budgetSummary.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btn_search.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dtp_from.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>BudgetSummaryView</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -580,14 +583,11 @@
   <data name="&gt;&gt;dtp_to.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="dtp_from.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 21</value>
-  </data>
   <data name="&gt;&gt;btn_search.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 22</value>
+  <data name="lbl_start.Text" xml:space="preserve">
+    <value>lbl_start</value>
   </data>
   <data name="dtp_to.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 21</value>
@@ -610,6 +610,9 @@
   <data name="&gt;&gt;btn_search.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;dgv_expenseCategory.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="dtp_from.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -619,8 +622,8 @@
   <data name="&gt;&gt;dtp_from.Name" xml:space="preserve">
     <value>dtp_from</value>
   </data>
-  <data name="&gt;&gt;dgv_budgetSummary.Name" xml:space="preserve">
-    <value>dgv_budgetSummary</value>
+  <data name="lbl_end.Text" xml:space="preserve">
+    <value>lbl_end</value>
   </data>
   <data name="&gt;&gt;dgv_budgetSummary.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -631,20 +634,17 @@
   <data name="&gt;&gt;lbl_start.Name" xml:space="preserve">
     <value>lbl_start</value>
   </data>
-  <data name="lbl_end.Text" xml:space="preserve">
+  <data name="$this.Text" xml:space="preserve">
+    <value>예산현황보기</value>
+  </data>
+  <data name="&gt;&gt;lbl_end.Name" xml:space="preserve">
     <value>lbl_end</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>BudgetSummaryView</value>
-  </data>
-  <data name="&gt;&gt;lbl_start.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ko-KR</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ko-KR</value>
   </metadata>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

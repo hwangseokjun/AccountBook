@@ -29,6 +29,14 @@ namespace AccountBook.Views
         private List<IncomeCategory> _incomeCategories;
         private List<ExpenseType> _expenseTypes;
         private List<Store> _stores;
+        private bool _toggleDate = false;
+        private bool _toggleIncomeAmount = false;
+        private bool _toggleExpenseAmount = false;
+        private bool _toggleStore;
+        private bool _toggleIncomeCategory;
+        private bool _toggleExpenseCategory;
+        private bool _toggleExpenseType;
+        private bool _toggleDescription;
 
         public List<Account> Accounts 
         {
@@ -45,7 +53,7 @@ namespace AccountBook.Views
             get => _expenseCategories;
             set 
             {
-                _expenseCategories = value;
+                _expenseCategories = value.OrderBy(x => x.Sequence).ToList();
                 dgv_expenseCategory.DataSource = null;
                 var showing = chk_showDeletedCategory.Checked ? _expenseCategories : _expenseCategories.FindAll(x => x.IsDeleted == false);
                 dgv_expenseCategory.DataSource = showing;
@@ -59,9 +67,10 @@ namespace AccountBook.Views
             get => _incomeCategories;
             set
             {
-                _incomeCategories = value;
+                _incomeCategories = value.OrderBy(x => x.Sequence).ToList(); ;
                 dgv_incomeCategory.DataSource = null;
                 var showing = chk_showDeletedCategory.Checked ? _incomeCategories : _incomeCategories.FindAll(x => x.IsDeleted == false);
+                showing = showing.OrderBy(x => x.Sequence).ToList();
                 dgv_incomeCategory.DataSource = showing;
                 cbx_incomeCategory.DataSource = null;
                 cbx_incomeCategory.DataSource = showing;
@@ -73,9 +82,10 @@ namespace AccountBook.Views
             get => _expenseTypes;
             set
             {
-                _expenseTypes = value;
+                _expenseTypes = value.OrderBy(x => x.Sequence).ToList(); ;
                 dgv_expenseType.DataSource = null;
                 var showing = chk_showDeletedCategory.Checked ? _expenseTypes : _expenseTypes.FindAll(x => x.IsDeleted == false);
+                showing = showing.OrderBy(x => x.Sequence).ToList();
                 dgv_expenseType.DataSource = showing;
                 cbx_expenseType.DataSource = null;
                 cbx_expenseType.DataSource = showing;
@@ -87,9 +97,10 @@ namespace AccountBook.Views
             get => _stores;
             set
             {
-                _stores = value;
+                _stores = value.OrderBy(x => x.Sequence).ToList(); ;
                 dgv_store.DataSource = null;
                 var showing = chk_showDeletedCategory.Checked ? _stores : _stores.FindAll(x => x.IsDeleted == false);
+                showing = showing.OrderBy(x => x.Sequence).ToList();
                 dgv_store.DataSource = showing;
                 cbx_store.DataSource = null;
                 cbx_store.DataSource = showing;
@@ -128,9 +139,9 @@ namespace AccountBook.Views
             var account = new Account 
             { 
                 Date = dtp_saveExpense.Value,
-                Store = (Store)((Store)cbx_store.SelectedItem).Clone(),
-                ExpenseCategory = (ExpenseCategory)((ExpenseCategory)cbx_expenseCategory.SelectedItem).Clone(),
-                ExpenseType = (ExpenseType)((ExpenseType)cbx_expenseType.SelectedItem).Clone(),
+                Store = cbx_store.SelectedText,
+                ExpenseCategory = cbx_expenseCategory.SelectedText,
+                ExpenseType = cbx_expenseType.SelectedText,
                 ExpenseAmount = int.Parse(txt_expenseAmount.Text),
                 Description = txt_expenseDescription.Text
             };
@@ -142,7 +153,7 @@ namespace AccountBook.Views
             var account = new Account
             {
                 Date = dtp_saveIncome.Value,
-                IncomeCategory = (IncomeCategory)((IncomeCategory)cbx_incomeCategory.SelectedItem).Clone(),
+                IncomeCategory = cbx_incomeCategory.SelectedText,
                 IncomeAmount = int.Parse(txt_incomeAmount.Text),
                 Description = txt_incomeDescription.Text
             };
@@ -176,10 +187,6 @@ namespace AccountBook.Views
 
         private void dgv_account_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            //if (0 <= e.RowIndex && 0 <= e.ColumnIndex) 
-            //{
-                
-            //}
             DataGridViewRow changedRow = dgv_account.Rows[e.RowIndex];
             var account = (Account)changedRow.DataBoundItem;
             UpdateAccount?.Invoke(account);
@@ -226,7 +233,11 @@ namespace AccountBook.Views
             switch (text) 
             {
                 case "지출항목":
-                    int amount = int.Parse(txt_saveExpenseCategoryAmount.Text);
+                    bool success = int.TryParse(txt_saveExpenseCategoryAmount.Text, out int amount);
+                    if (!success) 
+                    {
+                        amount = 0;
+                    }
                     SaveCategory.Invoke(new ExpenseCategory { Name = name, Amount = amount });
                     break;
 
@@ -282,8 +293,16 @@ namespace AccountBook.Views
             var textBox = (TextBox)sender;
             string input = textBox.Text;
             char key = e.KeyChar;
-            bool isNumeric = IsNumeric(input, key);
-            e.Handled = !isNumeric;
+
+            if (string.IsNullOrEmpty(input)) 
+            {
+                txt_saveExpenseCategoryAmount.Text = "0";
+            }
+
+            if (!char.IsControl(key) && !char.IsDigit(key))
+            {
+                e.Handled = true;
+            }
         }
 
         private bool IsNumeric(string input, char key) 
@@ -320,11 +339,19 @@ namespace AccountBook.Views
                 return;
             }
 
-            if (e.ColumnIndex == 7 && 0 < (int)e.Value)
+            if (e.ColumnIndex == 1)
+            {
+                if (e.Value is DateTime date)
+                {
+                    e.Value = date.ToString("yyyy-MM-dd");
+                    e.FormattingApplied = true;
+                }
+            }
+            else if (e.ColumnIndex == 7 && 0 < (int)e.Value)
             {
                 e.CellStyle.ForeColor = Color.Green;
             }
-            else if (e.ColumnIndex == 8 && 0 < (int)e.Value) 
+            else if (e.ColumnIndex == 8 && 0 < (int)e.Value)
             {
                 e.CellStyle.ForeColor = Color.Red;
             }
@@ -342,6 +369,55 @@ namespace AccountBook.Views
             if (!dgv_account.IsCurrentCellDirty) 
             {
                 return;
+            }
+
+            string name = (string)e.FormattedValue;
+            bool exists;
+
+            if (string.IsNullOrEmpty(name)) 
+            {
+                return;
+            }
+
+            if (e.ColumnIndex == 2)
+            {
+                exists = Stores.Exists(x => x.Name == name);
+
+                if (!exists) 
+                {
+                    MessageBox.Show("등록되지 않은 구매처입니다.");
+                    e.Cancel = true;
+                }
+            }
+            else if (e.ColumnIndex == 3) 
+            {
+                exists = IncomeCategories.Exists(x => x.Name == name);
+
+                if (!exists)
+                {
+                    MessageBox.Show("등록되지 않은 수입 항목입니다.");
+                    e.Cancel = true;
+                }
+            }
+            else if (e.ColumnIndex == 4)
+            {
+                exists = ExpenseCategories.Exists(x => x.Name == name);
+                
+                if (!exists)
+                {
+                    MessageBox.Show("등록되지 않은 지출 항목입니다.");
+                    e.Cancel = true;
+                }
+            }
+            else if (e.ColumnIndex == 5)
+            {
+                exists = ExpenseTypes.Exists(x => x.Name == name);
+
+                if (!exists)
+                {
+                    MessageBox.Show("등록되지 않은 지출 분류입니다.");
+                    e.Cancel = true;
+                }
             }
         }
 
@@ -462,6 +538,130 @@ namespace AccountBook.Views
             if (store.IsDeleted)
             {
                 e.CellStyle.BackColor = Color.LightSalmon;
+            }
+        }
+
+        private void btn_expenseCategoryUp_Click(object sender, EventArgs e)
+        {
+            int rowHandle = dgv_expenseCategory.SelectedCells[0].RowIndex;
+            int sequence = 0;
+            ExpenseCategories.ForEach(x => x.Sequence = sequence++);
+            ExpenseCategories.SwapSequence(rowHandle, true);
+            ExpenseCategories.ForEach(x => UpdateCategory(x));
+            ExpenseCategories = ExpenseCategories;
+        }
+
+        private void btn_expenseCategoryDown_Click(object sender, EventArgs e)
+        {
+            int rowHandle = dgv_expenseCategory.SelectedCells[0].RowIndex;
+            int sequence = 0;
+            ExpenseCategories.ForEach(x => x.Sequence = sequence++);
+            ExpenseCategories.SwapSequence(rowHandle, false);
+            ExpenseCategories.ForEach(x => UpdateCategory(x));
+            ExpenseCategories = ExpenseCategories;
+        }
+
+        private void btn_incomeCategoryUp_Click(object sender, EventArgs e)
+        {
+            int rowHandle = dgv_incomeCategory.SelectedCells[0].RowIndex;
+            int sequence = 0;
+            IncomeCategories.ForEach(x => x.Sequence = sequence++);
+            IncomeCategories.SwapSequence(rowHandle, true);
+            IncomeCategories.ForEach(x => UpdateCategory(x));
+            IncomeCategories = IncomeCategories;
+        }
+
+        private void btn_incomeCategoryDown_Click(object sender, EventArgs e)
+        {
+            int rowHandle = dgv_incomeCategory.SelectedCells[0].RowIndex;
+            int sequence = 0;
+            IncomeCategories.ForEach(x => x.Sequence = sequence++);
+            IncomeCategories.SwapSequence(rowHandle, false);
+            IncomeCategories.ForEach(x => UpdateCategory(x));
+            IncomeCategories = IncomeCategories;
+        }
+
+        private void btn_expenseTypeUp_Click(object sender, EventArgs e)
+        {
+            int rowHandle = dgv_expenseType.SelectedCells[0].RowIndex;
+            int sequence = 0;
+            ExpenseTypes.ForEach(x => x.Sequence = sequence++);
+            ExpenseTypes.SwapSequence(rowHandle, true);
+            ExpenseTypes.ForEach(x => UpdateCategory(x));
+            ExpenseTypes = ExpenseTypes;
+        }
+
+        private void btn_expenseTypeDown_Click(object sender, EventArgs e)
+        {
+            int rowHandle = dgv_expenseType.SelectedCells[0].RowIndex;
+            int sequence = 0;
+            ExpenseTypes.ForEach(x => x.Sequence = sequence++);
+            ExpenseTypes.SwapSequence(rowHandle, false);
+            ExpenseTypes.ForEach(x => UpdateCategory(x));
+            ExpenseTypes = ExpenseTypes;
+        }
+
+        private void btn_storeUp_Click(object sender, EventArgs e)
+        {
+            int rowHandle = dgv_store.SelectedCells[0].RowIndex;
+            int sequence = 0;
+            Stores.ForEach(x => x.Sequence = sequence++);
+            Stores.SwapSequence(rowHandle, true);
+            Stores.ForEach(x => UpdateCategory(x));
+            Stores = Stores;
+        }
+
+        private void btn_storeDown_Click(object sender, EventArgs e)
+        {
+            int rowHandle = dgv_store.SelectedCells[0].RowIndex;
+            int sequence = 0;
+            Stores.ForEach(x => x.Sequence = sequence++);
+            Stores.SwapSequence(rowHandle, false);
+            Stores.ForEach(x => UpdateCategory(x));
+            Stores = Stores;
+        }
+
+        private void dgv_account_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                _toggleDate ^= true;
+                Accounts = _toggleDate ? Accounts.OrderByDescending(x => x.Date).ToList() : Accounts.OrderBy(x => x.Date).ToList();
+            }
+            else if (e.ColumnIndex == 2)
+            {
+                _toggleStore ^= true;
+                Accounts = _toggleStore ? Accounts.OrderByDescending(x => x.Store).ToList() : Accounts.OrderBy(x => x.Store).ToList();
+            }
+            else if (e.ColumnIndex == 3)
+            {
+                _toggleIncomeCategory ^= true;
+                Accounts = _toggleIncomeCategory ? Accounts.OrderByDescending(x => x.IncomeCategory).ToList() : Accounts.OrderBy(x => x.IncomeCategory).ToList();
+            }
+            else if (e.ColumnIndex == 4)
+            {
+                _toggleExpenseCategory ^= true;
+                Accounts = _toggleExpenseCategory ? Accounts.OrderByDescending(x => x.ExpenseCategory).ToList() : Accounts.OrderBy(x => x.ExpenseCategory).ToList();
+            }
+            else if (e.ColumnIndex == 5)
+            {
+                _toggleExpenseType ^= true;
+                Accounts = _toggleExpenseType ? Accounts.OrderByDescending(x => x.ExpenseType).ToList() : Accounts.OrderBy(x => x.ExpenseType).ToList();
+            }
+            else if (e.ColumnIndex == 6)
+            {
+                _toggleDescription ^= true;
+                Accounts = _toggleDescription ? Accounts.OrderByDescending(x => x.Description).ToList() : Accounts.OrderBy(x => x.Description).ToList();
+            }
+            else if (e.ColumnIndex == 7)
+            {
+                _toggleIncomeAmount ^= true;
+                Accounts = _toggleIncomeAmount ? Accounts.OrderByDescending(x => x.IncomeAmount).ToList() : Accounts.OrderBy(x => x.IncomeAmount).ToList();
+            }
+            else if (e.ColumnIndex == 8)
+            {
+                _toggleExpenseAmount ^= true;
+                Accounts = _toggleExpenseAmount ? Accounts.OrderByDescending(x => x.ExpenseAmount).ToList() : Accounts.OrderBy(x => x.ExpenseAmount).ToList();
             }
         }
     }

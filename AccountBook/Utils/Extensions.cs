@@ -28,7 +28,8 @@ namespace AccountBook.Utils
                     Id = commonCode.Id,
                     IsDeleted = Convert.ToBoolean(commonCode.IsDeleted),
                     Name = commonCode.Name,
-                    Amount = commonCode.Amount
+                    Amount = commonCode.Amount,
+                    Sequence = commonCode.Sequence
                 });
             }
 
@@ -41,5 +42,34 @@ namespace AccountBook.Utils
 
             return item != null ? (T)item.Clone() : default;
         }
+
+        public static void SwapSequence<T>(this List<T> source, int index, bool isUp) where T : BaseCategory 
+        {
+            int capacity = source.Count;
+            int swap;
+
+            if (isUp) 
+            {
+                if (index == 0) 
+                {
+                    return;
+                }
+
+                swap = (int)source[index - 1].Sequence;
+                source[index - 1].Sequence = source[index].Sequence;
+                source[index].Sequence = swap;
+
+                return;
+            }
+
+            if (capacity <= index + 1) 
+            {
+                return;
+            }
+
+            swap = (int)source[index + 1].Sequence;
+            source[index + 1].Sequence = source[index].Sequence;
+            source[index].Sequence = swap;
+        } 
     }
 }

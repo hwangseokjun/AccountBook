@@ -103,6 +103,14 @@ namespace AccountBook.Views
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbl_startDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_endDate = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btn_expenseCategoryUp = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_expenseCategoryDown = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_incomeCategoryUp = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_incomeCategoryDown = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_expenseTypeUp = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_expenseTypeDown = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_storeUp = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_storeDown = new System.Windows.Forms.ToolStripMenuItem();
             this.gbx_search.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.gbx_account.SuspendLayout();
@@ -460,6 +468,7 @@ namespace AccountBook.Views
             resources.ApplyResources(this.dgv_expenseCategory, "dgv_expenseCategory");
             this.dgv_expenseCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_expenseCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_expenseCategory.MultiSelect = false;
             this.dgv_expenseCategory.Name = "dgv_expenseCategory";
             this.dgv_expenseCategory.RowHeadersVisible = false;
             this.dgv_expenseCategory.RowTemplate.Height = 30;
@@ -470,7 +479,9 @@ namespace AccountBook.Views
             // 
             resources.ApplyResources(this.menuStrip2, "menuStrip2");
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_deleteExpenseCategory});
+            this.btn_deleteExpenseCategory,
+            this.btn_expenseCategoryUp,
+            this.btn_expenseCategoryDown});
             this.menuStrip2.Name = "menuStrip2";
             // 
             // btn_deleteExpenseCategory
@@ -494,6 +505,7 @@ namespace AccountBook.Views
             resources.ApplyResources(this.dgv_incomeCategory, "dgv_incomeCategory");
             this.dgv_incomeCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_incomeCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_incomeCategory.MultiSelect = false;
             this.dgv_incomeCategory.Name = "dgv_incomeCategory";
             this.dgv_incomeCategory.RowHeadersVisible = false;
             this.dgv_incomeCategory.RowTemplate.Height = 30;
@@ -503,7 +515,9 @@ namespace AccountBook.Views
             // 
             resources.ApplyResources(this.menuStrip3, "menuStrip3");
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_deleteIncomeCategory});
+            this.btn_deleteIncomeCategory,
+            this.btn_incomeCategoryUp,
+            this.btn_incomeCategoryDown});
             this.menuStrip3.Name = "menuStrip3";
             // 
             // btn_deleteIncomeCategory
@@ -527,6 +541,7 @@ namespace AccountBook.Views
             resources.ApplyResources(this.dgv_expenseType, "dgv_expenseType");
             this.dgv_expenseType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_expenseType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_expenseType.MultiSelect = false;
             this.dgv_expenseType.Name = "dgv_expenseType";
             this.dgv_expenseType.RowHeadersVisible = false;
             this.dgv_expenseType.RowTemplate.Height = 30;
@@ -536,7 +551,9 @@ namespace AccountBook.Views
             // 
             resources.ApplyResources(this.menuStrip4, "menuStrip4");
             this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_deleteExpenseType});
+            this.btn_deleteExpenseType,
+            this.btn_expenseTypeUp,
+            this.btn_expenseTypeDown});
             this.menuStrip4.Name = "menuStrip4";
             // 
             // btn_deleteExpenseType
@@ -560,6 +577,7 @@ namespace AccountBook.Views
             resources.ApplyResources(this.dgv_store, "dgv_store");
             this.dgv_store.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_store.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_store.MultiSelect = false;
             this.dgv_store.Name = "dgv_store";
             this.dgv_store.RowHeadersVisible = false;
             this.dgv_store.RowTemplate.Height = 30;
@@ -569,7 +587,9 @@ namespace AccountBook.Views
             // 
             resources.ApplyResources(this.menuStrip5, "menuStrip5");
             this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_deleteStore});
+            this.btn_deleteStore,
+            this.btn_storeUp,
+            this.btn_storeDown});
             this.menuStrip5.Name = "menuStrip5";
             // 
             // btn_deleteStore
@@ -585,12 +605,14 @@ namespace AccountBook.Views
             resources.ApplyResources(this.dgv_account, "dgv_account");
             this.dgv_account.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_account.MultiSelect = false;
             this.dgv_account.Name = "dgv_account";
             this.dgv_account.RowHeadersVisible = false;
             this.dgv_account.RowTemplate.Height = 23;
             this.dgv_account.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_account_CellFormatting);
             this.dgv_account.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgv_account_CellValidating);
             this.dgv_account.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_account_CellValueChanged);
+            this.dgv_account.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_account_ColumnHeaderMouseClick);
             // 
             // btn_deleteAccount
             // 
@@ -652,6 +674,54 @@ namespace AccountBook.Views
             // 
             resources.ApplyResources(this.lbl_endDate, "lbl_endDate");
             this.lbl_endDate.Name = "lbl_endDate";
+            // 
+            // btn_expenseCategoryUp
+            // 
+            resources.ApplyResources(this.btn_expenseCategoryUp, "btn_expenseCategoryUp");
+            this.btn_expenseCategoryUp.Name = "btn_expenseCategoryUp";
+            this.btn_expenseCategoryUp.Click += new System.EventHandler(this.btn_expenseCategoryUp_Click);
+            // 
+            // btn_expenseCategoryDown
+            // 
+            resources.ApplyResources(this.btn_expenseCategoryDown, "btn_expenseCategoryDown");
+            this.btn_expenseCategoryDown.Name = "btn_expenseCategoryDown";
+            this.btn_expenseCategoryDown.Click += new System.EventHandler(this.btn_expenseCategoryDown_Click);
+            // 
+            // btn_incomeCategoryUp
+            // 
+            resources.ApplyResources(this.btn_incomeCategoryUp, "btn_incomeCategoryUp");
+            this.btn_incomeCategoryUp.Name = "btn_incomeCategoryUp";
+            this.btn_incomeCategoryUp.Click += new System.EventHandler(this.btn_incomeCategoryUp_Click);
+            // 
+            // btn_incomeCategoryDown
+            // 
+            resources.ApplyResources(this.btn_incomeCategoryDown, "btn_incomeCategoryDown");
+            this.btn_incomeCategoryDown.Name = "btn_incomeCategoryDown";
+            this.btn_incomeCategoryDown.Click += new System.EventHandler(this.btn_incomeCategoryDown_Click);
+            // 
+            // btn_expenseTypeUp
+            // 
+            resources.ApplyResources(this.btn_expenseTypeUp, "btn_expenseTypeUp");
+            this.btn_expenseTypeUp.Name = "btn_expenseTypeUp";
+            this.btn_expenseTypeUp.Click += new System.EventHandler(this.btn_expenseTypeUp_Click);
+            // 
+            // btn_expenseTypeDown
+            // 
+            resources.ApplyResources(this.btn_expenseTypeDown, "btn_expenseTypeDown");
+            this.btn_expenseTypeDown.Name = "btn_expenseTypeDown";
+            this.btn_expenseTypeDown.Click += new System.EventHandler(this.btn_expenseTypeDown_Click);
+            // 
+            // btn_storeUp
+            // 
+            resources.ApplyResources(this.btn_storeUp, "btn_storeUp");
+            this.btn_storeUp.Name = "btn_storeUp";
+            this.btn_storeUp.Click += new System.EventHandler(this.btn_storeUp_Click);
+            // 
+            // btn_storeDown
+            // 
+            resources.ApplyResources(this.btn_storeDown, "btn_storeDown");
+            this.btn_storeDown.Name = "btn_storeDown";
+            this.btn_storeDown.Click += new System.EventHandler(this.btn_storeDown_Click);
             // 
             // AccountView
             // 
@@ -789,6 +859,14 @@ namespace AccountBook.Views
         private System.Windows.Forms.ToolStripMenuItem btn_deleteExpenseType;
         private System.Windows.Forms.ToolStripMenuItem btn_deleteStore;
         private System.Windows.Forms.CheckBox chk_showDeletedCategory;
+        private System.Windows.Forms.ToolStripMenuItem btn_expenseCategoryUp;
+        private System.Windows.Forms.ToolStripMenuItem btn_expenseCategoryDown;
+        private System.Windows.Forms.ToolStripMenuItem btn_incomeCategoryUp;
+        private System.Windows.Forms.ToolStripMenuItem btn_incomeCategoryDown;
+        private System.Windows.Forms.ToolStripMenuItem btn_expenseTypeUp;
+        private System.Windows.Forms.ToolStripMenuItem btn_expenseTypeDown;
+        private System.Windows.Forms.ToolStripMenuItem btn_storeUp;
+        private System.Windows.Forms.ToolStripMenuItem btn_storeDown;
     }
 }
 

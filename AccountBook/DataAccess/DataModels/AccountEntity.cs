@@ -26,25 +26,13 @@ namespace AccountBook.DataAccess
 
         }
 
-        public AccountEntity(Account account)
+        public void Update(AccountEntity account) 
         {
-            Date = account.Date.ToString("yyyy-MM-dd");
-            StoreId = account.Store?.Id;
-            ExpenseCategoryId = account.ExpenseCategory?.Id;
-            IncomeCategoryId = account.IncomeCategory?.Id;
-            ExpenseTypeId = account.ExpenseType?.Id;
-            Description = account.Description;
-            IncomeAmount = account.IncomeAmount;
-            ExpenseAmount = account.ExpenseAmount;
-        }
-
-        public void Update(Account account) 
-        {
-            Date = account.Date.ToString("yyyy-MM-dd");
-            StoreId = account.Store?.Id;
-            ExpenseCategoryId = account.ExpenseCategory?.Id;
-            IncomeCategoryId = account.IncomeCategory?.Id;
-            ExpenseTypeId = account.ExpenseType?.Id;
+            Date = account.Date;
+            StoreId = account.StoreId;
+            ExpenseCategoryId = account.ExpenseCategoryId;
+            IncomeCategoryId = account.IncomeCategoryId;
+            ExpenseTypeId = account.ExpenseTypeId;
             Description = account.Description;
             IncomeAmount = account.IncomeAmount;
             ExpenseAmount = account.ExpenseAmount;
