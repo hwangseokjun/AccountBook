@@ -20,8 +20,8 @@ namespace AccountBook
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var accountView = new AccountView();
-            var accountRepository = new AccountRepository();
-            var commonCodeRepository = new CommonCodeRepository();
+            var accountRepository = Singleton.Instance.AccountRepository;
+            var commonCodeRepository = Singleton.Instance.CommonCodeRepository;
             var accountPresenter = new AccountPresenter(accountView, accountRepository, commonCodeRepository);
             accountPresenter.Initialize();
             Application.Run(accountView);

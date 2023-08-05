@@ -1,4 +1,5 @@
 ﻿using AccountBook.DataAccess;
+using AccountBook.Dtos;
 using AccountBook.Models;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace AccountBook.Views
         event Action<BaseCategory> SaveCategory;
         event Action<int> RemoveCategory;
         event Action<BaseCategory> UpdateCategory;
+
+        event Action<SearchKeyword> SearchAccount;
 
         List<Account> Accounts { get; set; }
         List<ExpenseCategory> ExpenseCategories { get; set; }

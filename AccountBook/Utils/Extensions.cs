@@ -27,7 +27,8 @@ namespace AccountBook.Utils
                 {
                     Id = commonCode.Id,
                     IsDeleted = Convert.ToBoolean(commonCode.IsDeleted),
-                    Name = commonCode.Name
+                    Name = commonCode.Name,
+                    Amount = commonCode.Amount
                 });
             }
 

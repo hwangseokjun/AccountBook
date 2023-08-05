@@ -1,4 +1,6 @@
-﻿using AccountBook.Models;
+﻿using AccountBook.Dtos;
+using AccountBook.Models;
+using AccountBook.Presenters;
 using AccountBook.Utils;
 using System;
 using System.Collections.Generic;
@@ -20,6 +22,7 @@ namespace AccountBook.Views
         public event Action<BaseCategory> SaveCategory;
         public event Action<int> RemoveCategory;
         public event Action<BaseCategory> UpdateCategory;
+        public event Action<SearchKeyword> SearchAccount;
 
         private List<Account> _accounts;
         private List<ExpenseCategory> _expenseCategories;
@@ -123,14 +126,23 @@ namespace AccountBook.Views
                 Date = dtp_saveExpense.Value,
                 Store = (Store)((Store)cbx_store.SelectedItem).Clone(),
                 ExpenseCategory = (ExpenseCategory)((ExpenseCategory)cbx_expenseCategory.SelectedItem).Clone(),
-
+                ExpenseType = (ExpenseType)((ExpenseType)cbx_expenseType.SelectedItem).Clone(),
+                ExpenseAmount = int.Parse(txt_expenseAmount.Text),
+                Description = txt_expenseDescription.Text
             };
-            SaveAccount?.Invoke(null);
+            SaveAccount?.Invoke(account);
         }
 
         private void btn_saveIncomeAccount_Click(object sender, EventArgs e)
         {
-            SaveAccount?.Invoke(null);
+            var account = new Account
+            {
+                Date = dtp_saveIncome.Value,
+                IncomeCategory = (IncomeCategory)((IncomeCategory)cbx_incomeCategory.SelectedItem).Clone(),
+                IncomeAmount = int.Parse(txt_incomeAmount.Text),
+                Description = txt_incomeDescription.Text
+            };
+            SaveAccount?.Invoke(account);
         }
 
         private void btn_deleteAccount_Click(object sender, EventArgs e)
@@ -146,7 +158,16 @@ namespace AccountBook.Views
 
         private void btn_search_Click(object sender, EventArgs e)
         {
+            DateTime start = dtp_from.Value;
+            DateTime end = dtp_to.Value;
 
+            var keyword = new SearchKeyword 
+            { 
+                Start = start,
+                End = end
+            };
+
+            SearchAccount.Invoke(keyword);
         }
 
         private void dgv_account_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -182,8 +203,8 @@ namespace AccountBook.Views
         private void btn_saveCategory_Click(object sender, EventArgs e)
         {
             string text = cbx_saveCategory.SelectedItem.ToString();
-            string name = txt_saveCategory.Text;
-
+            string name = txt_saveCategoryText.Text;
+            
             if (string.IsNullOrWhiteSpace(name)) 
             {
                 MessageBox.Show("카테고리명 입력 필요");
@@ -194,7 +215,8 @@ namespace AccountBook.Views
             switch (text) 
             {
                 case "지출항목":
-                    SaveCategory.Invoke(new ExpenseCategory { Name = name });
+                    int amount = int.Parse(txt_saveExpenseCategoryAmount.Text);
+                    SaveCategory.Invoke(new ExpenseCategory { Name = name, Amount = amount });
                     break;
 
                 case "수입항목":
@@ -211,6 +233,72 @@ namespace AccountBook.Views
 
                 default:
                     throw new NotSupportedException("");
+            }
+        }
+
+        private void txt_expenseAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var textBox = (TextBox)sender;
+            string input = textBox.Text;
+            char key = e.KeyChar;
+            bool isNumeric = IsNumeric(input, key);
+            e.Handled = !isNumeric;
+        }
+
+        private void txt_incomeAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var textBox = (TextBox)sender;
+            string input = textBox.Text;
+            char key = e.KeyChar;
+            bool isNumeric = IsNumeric(input, key);
+            e.Handled = !isNumeric;
+        }
+
+        private void cbx_saveCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbx_saveCategory.SelectedIndex == 0)
+            {
+                txt_saveExpenseCategoryAmount.Enabled = true;
+            }
+            else 
+            {
+                txt_saveExpenseCategoryAmount.Enabled = false;
+            }
+        }
+
+        private void txt_saveExpenseCategoryAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var textBox = (TextBox)sender;
+            string input = textBox.Text;
+            char key = e.KeyChar;
+            bool isNumeric = IsNumeric(input, key);
+            e.Handled = !isNumeric;
+        }
+
+        private bool IsNumeric(string input, char key) 
+        {
+            if (string.IsNullOrEmpty(input) && key == '0')
+            {
+                return false;
+            }
+
+            if (!char.IsControl(key) && !char.IsDigit(key))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void btn_budget_Click(object sender, EventArgs e)
+        {
+            using (var budetSummaryModel = new BudgetSummaryView()) 
+            {
+                var accountRepository = Singleton.Instance.AccountRepository;
+                var commonCodeRepository = Singleton.Instance.CommonCodeRepository;
+                var accountPresenter = new BudgetSummaryPresenter(budetSummaryModel, accountRepository, commonCodeRepository);
+                accountPresenter.Initialize();
+                budetSummaryModel.ShowDialog();
             }
         }
     }

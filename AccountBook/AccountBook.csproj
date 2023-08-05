@@ -42,6 +42,7 @@
       <HintPath>..\packages\Dapper.Contrib.2.0.78\lib\net461\Dapper.Contrib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
@@ -66,13 +67,17 @@
     <Compile Include="DataAccess\DataModels\CommonCode.cs" />
     <Compile Include="DataAccess\ICommonCodeRepository.cs" />
     <Compile Include="DataAccess\IRepository.cs" />
+    <Compile Include="Dtos\SearchKeyword.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\BaseCategory.cs" />
+    <Compile Include="Models\BudgetSummary.cs" />
     <Compile Include="Models\ExpenseCategory.cs" />
     <Compile Include="Models\IncomeCategory.cs" />
     <Compile Include="Models\ExpenseType.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Presenters\AccountPresenter.cs" />
+    <Compile Include="Presenters\BudgetSummaryPresenter.cs" />
+    <Compile Include="Singleton.cs" />
     <Compile Include="Utils\Extensions.cs" />
     <Compile Include="Views\AccountView.cs">
       <SubType>Form</SubType>
@@ -82,7 +87,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\BudgetSummaryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BudgetSummaryView.Designer.cs">
+      <DependentUpon>BudgetSummaryView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\IAccountView.cs" />
+    <Compile Include="Views\IBudgetSummartView.cs" />
     <EmbeddedResource Include="Views\AccountView.resx">
       <DependentUpon>AccountView.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +107,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\BudgetSummaryView.resx">
+      <DependentUpon>BudgetSummaryView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="db.sqlite">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

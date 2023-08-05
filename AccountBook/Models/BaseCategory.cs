@@ -16,6 +16,8 @@ namespace AccountBook.Models
         public bool IsDeleted { get; set; }
         [DisplayName("카테고리명")]
         public string Name { get; set; }
+        [DisplayName("한도금액")]
+        public int? Amount { get; set; }
 
         public override string ToString()
         {

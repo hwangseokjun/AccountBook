@@ -13,13 +13,13 @@ namespace AccountBook.DataAccess
     {
         public int Id { get; set; }
         public string Date { get; set; }
-        public int StoreId { get; set; }
-        public int ExpenseCategoryId { get; set; }
-        public int IncomeCategoryId { get; set; }
-        public int ExpenseTypeId { get; set; }
+        public int? StoreId { get; set; }
+        public int? ExpenseCategoryId { get; set; }
+        public int? IncomeCategoryId { get; set; }
+        public int? ExpenseTypeId { get; set; }
         public string Description { get; set; }
-        public int IncomeAmount { get; set; }
-        public int ExpenseAmount { get; set; }
+        public int? IncomeAmount { get; set; }
+        public int? ExpenseAmount { get; set; }
 
         public AccountEntity()
         {
@@ -29,10 +29,10 @@ namespace AccountBook.DataAccess
         public AccountEntity(Account account)
         {
             Date = account.Date.ToString("yyyy-MM-dd");
-            StoreId = account.Store.Id;
-            ExpenseCategoryId = account.ExpenseCategory.Id;
-            IncomeCategoryId = account.IncomeCategory.Id;
-            ExpenseTypeId = account.ExpenseType.Id;
+            StoreId = account.Store?.Id;
+            ExpenseCategoryId = account.ExpenseCategory?.Id;
+            IncomeCategoryId = account.IncomeCategory?.Id;
+            ExpenseTypeId = account.ExpenseType?.Id;
             Description = account.Description;
             IncomeAmount = account.IncomeAmount;
             ExpenseAmount = account.ExpenseAmount;
@@ -41,10 +41,10 @@ namespace AccountBook.DataAccess
         public void Update(Account account) 
         {
             Date = account.Date.ToString("yyyy-MM-dd");
-            StoreId = account.Store.Id;
-            ExpenseCategoryId = account.ExpenseCategory.Id;
-            IncomeCategoryId = account.IncomeCategory.Id;
-            ExpenseTypeId = account.ExpenseType.Id;
+            StoreId = account.Store?.Id;
+            ExpenseCategoryId = account.ExpenseCategory?.Id;
+            IncomeCategoryId = account.IncomeCategory?.Id;
+            ExpenseTypeId = account.ExpenseType?.Id;
             Description = account.Description;
             IncomeAmount = account.IncomeAmount;
             ExpenseAmount = account.ExpenseAmount;

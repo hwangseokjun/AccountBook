@@ -11,7 +11,7 @@ namespace AccountBook.DataAccess
     public class CommonCode
     {
         public int Id { get; set; }
-        public int Sequence { get; set; }
+        public int? Sequence { get; set; }
         /// <summary>
         /// <para> 0 = 수입 항목 </para>
         /// <para> 1 = 지출 항목 </para>
@@ -20,6 +20,7 @@ namespace AccountBook.DataAccess
         /// </summary>
         public int Type { get; set; }
         public string Name { get; set; }
+        public int? Amount { get; set; }
         public int IsDeleted { get; set; }
     }
 }

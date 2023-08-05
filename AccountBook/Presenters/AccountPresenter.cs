@@ -1,4 +1,5 @@
 ﻿using AccountBook.DataAccess;
+using AccountBook.Dtos;
 using AccountBook.Models;
 using AccountBook.Utils;
 using AccountBook.Views;
@@ -27,43 +28,28 @@ namespace AccountBook.Presenters
             _accountView.SaveCategory += AddCategory;
             _accountView.UpdateCategory += ModifyCategory;
             _accountView.RemoveCategory += DeleteCategory;
+            _accountView.SearchAccount += SearchAccounts;
         }
 
         public void Initialize()
         {
             var currentDate = DateTime.Now;
-            string lastMonth19th = currentDate.AddMonths(-1).AddDays(18).ToString("yyyy-MM-dd");
-            string currentMonth20th = currentDate.AddDays(19).ToString("yyyy-MM-dd");
+            DateTime lastMonth = currentDate.AddMonths(-1);
+            string lastMonth19th = new DateTime(lastMonth.Year, lastMonth.Month, 19).ToString("yyyy-MM-dd");
+            string currentMonth20th = new DateTime(currentDate.Year, currentDate.Month, 20).ToString("yyyy-MM-dd");
             var accountEntities = _accountRepository.GetBetweenDate(lastMonth19th, currentMonth20th);
             var commonCodes = _commonCodeRepository.GetAll();
-            var accounts = new List<Account>();
-
             var incomeCategories = commonCodes.GetByCategoryType(CategoryType.Income).ToCategories<IncomeCategory>();
             var expenseCategories = commonCodes.GetByCategoryType(CategoryType.Expense).ToCategories<ExpenseCategory>();
             var expenseTypes = commonCodes.GetByCategoryType(CategoryType.ExpenseType).ToCategories<ExpenseType>();
             var stores = commonCodes.GetByCategoryType(CategoryType.Store).ToCategories<Store>();
-
-            foreach (var entity in accountEntities)
-            {
-                accounts.Add(new Account
-                {
-                    Id = entity.Id,
-                    Date = DateTime.Parse(entity.Date),
-                    Store = stores.FirstOrDefaultDeepCopy(x => x.Id == entity.StoreId),
-                    ExpenseCategory = expenseCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseCategoryId),
-                    ExpenseType = expenseTypes.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseTypeId),
-                    IncomeCategory = incomeCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.IncomeCategoryId),
-                    Description = entity.Description,
-                    IncomeAmount = entity.IncomeAmount,
-                    ExpenseAmount = entity.ExpenseAmount
-                });
-            }
-
-            _accountView.Accounts = accounts;
+            
             _accountView.ExpenseCategories = expenseCategories;
             _accountView.ExpenseTypes = expenseTypes;
             _accountView.IncomeCategories = incomeCategories;
             _accountView.Stores = stores;
+            var accounts = ToAccount(accountEntities);
+            _accountView.Accounts = accounts;
             _accountView.StartDate = lastMonth19th;
             _accountView.EndDate = currentMonth20th;
             CalculateRemains();
@@ -107,7 +93,8 @@ namespace AccountBook.Presenters
                 var commonCode = new CommonCode 
                 { 
                     Type = 1,
-                    Name = expenseCategory.Name
+                    Name = expenseCategory.Name,
+                    Amount = expenseCategory.Amount
                 };
                 id = _commonCodeRepository.Insert(commonCode);
                 var expenseCategories = _accountView.ExpenseCategories;
@@ -164,6 +151,41 @@ namespace AccountBook.Presenters
         public void DeleteCategory(int id) 
         { 
         
+        }
+
+        private void SearchAccounts(SearchKeyword searchKeyword)
+        {
+            string start = searchKeyword.Start.ToString("yyyy-MM-dd");
+            string end = searchKeyword.End.ToString("yyyy-MM-dd");
+            var accounts = _accountRepository.GetBetweenDate(start, end);
+            _accountView.Accounts = ToAccount(accounts);
+        }
+
+        private List<Account> ToAccount(IEnumerable<AccountEntity> accountEntities) 
+        {
+            var accounts = new List<Account>();
+            var expenseCategories = _accountView.ExpenseCategories;
+            var expenseTypes = _accountView.ExpenseTypes;
+            var incomeCategories = _accountView.IncomeCategories;
+            var stores = _accountView.Stores;
+
+            foreach (var entity in accountEntities)
+            {
+                accounts.Add(new Account
+                {
+                    Id = entity.Id,
+                    Date = DateTime.Parse(entity.Date),
+                    Store = stores.FirstOrDefaultDeepCopy(x => x.Id == entity.StoreId),
+                    ExpenseCategory = expenseCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseCategoryId),
+                    ExpenseType = expenseTypes.FirstOrDefaultDeepCopy(x => x.Id == entity.ExpenseTypeId),
+                    IncomeCategory = incomeCategories.FirstOrDefaultDeepCopy(x => x.Id == entity.IncomeCategoryId),
+                    Description = entity.Description,
+                    IncomeAmount = entity.IncomeAmount ?? 0,
+                    ExpenseAmount = entity.ExpenseAmount ?? 0
+                });
+            }
+
+            return accounts;
         }
 
         private void CalculateRemains() 
