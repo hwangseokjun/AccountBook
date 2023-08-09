@@ -62,10 +62,10 @@ namespace AccountBook.Presenters
             var expenseTypes = _accountView.ExpenseTypes;
             var stores = _accountView.Stores;
 
-            int storeId = stores.First(x => x.Name == account.Store).Id;
-            int expenseCategoryId = expenseCategories.First(x => x.Name == account.ExpenseCategory).Id;
-            int incomeCategoryId = incomeCategories.First(x => x.Name == account.IncomeCategory).Id;
-            int expenseTypeId = expenseTypes.First(x => x.Name == account.ExpenseType).Id;
+            int? storeId = stores.FirstOrDefault(x => x.Name == account.Store)?.Id;
+            int? expenseCategoryId = expenseCategories.FirstOrDefault(x => x.Name == account.ExpenseCategory)?.Id;
+            int? incomeCategoryId = incomeCategories.FirstOrDefault(x => x.Name == account.IncomeCategory)?.Id;
+            int? expenseTypeId = expenseTypes.FirstOrDefault(x => x.Name == account.ExpenseType)?.Id;
 
             int id = _accountRepository.Insert(new AccountEntity 
             { 

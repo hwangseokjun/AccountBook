@@ -139,9 +139,9 @@ namespace AccountBook.Views
             var account = new Account 
             { 
                 Date = dtp_saveExpense.Value,
-                Store = cbx_store.SelectedText,
-                ExpenseCategory = cbx_expenseCategory.SelectedText,
-                ExpenseType = cbx_expenseType.SelectedText,
+                Store = ((Store)cbx_store.SelectedItem).Name,
+                ExpenseCategory = ((ExpenseCategory)cbx_expenseCategory.SelectedItem).Name,
+                ExpenseType = ((ExpenseType)cbx_expenseType.SelectedItem).Name,
                 ExpenseAmount = int.Parse(txt_expenseAmount.Text),
                 Description = txt_expenseDescription.Text
             };
@@ -153,7 +153,7 @@ namespace AccountBook.Views
             var account = new Account
             {
                 Date = dtp_saveIncome.Value,
-                IncomeCategory = cbx_incomeCategory.SelectedText,
+                IncomeCategory = ((IncomeCategory)cbx_incomeCategory.SelectedItem).Name,
                 IncomeAmount = int.Parse(txt_incomeAmount.Text),
                 Description = txt_incomeDescription.Text
             };
